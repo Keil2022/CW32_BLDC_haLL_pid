@@ -78,8 +78,8 @@ void ADC_Configuration(void)
     DMA_InitStruct.DMA_SrcInc = DMA_SrcAddress_Fix;                 // 源地址固定
     DMA_InitStruct.DMA_TransferCnt = 0x3;                           // DMA传输次数
     DMA_InitStruct.DMA_TransferWidth = DMA_TRANSFER_WIDTH_8BIT;     // 数据位宽8bit
-    DMA_InitStruct.HardTrigSource = DMA_HardTrig_ADC_TRANSCOMPLETE;    // ADC转换完成硬触发
-    DMA_InitStruct.TrigMode = DMA_HardTrig;                         //  硬触发模式
+    DMA_InitStruct.HardTrigSource = DMA_HardTrig_ADC_TRANSCOMPLETE; // ADC转换完成硬触发
+    DMA_InitStruct.TrigMode = DMA_HardTrig;                         // 硬触发模式
     DMA_Init(CW_DMACHANNEL3, &DMA_InitStruct);
     DMA_Cmd(CW_DMACHANNEL3, ENABLE);
     
@@ -91,7 +91,7 @@ void ADC_Configuration(void)
     DMA_InitStruct.DMA_TransferCnt = 0x1;                           // DMA传输次数
     DMA_InitStruct.DMA_TransferWidth = DMA_TRANSFER_WIDTH_8BIT;     // 数据位宽8bit
     DMA_InitStruct.HardTrigSource = DMA_HardTrig_ATIM_CH1A2A3A4;    // ATIM硬件触发
-    DMA_InitStruct.TrigMode = DMA_HardTrig;                         //  硬触发模式
+    DMA_InitStruct.TrigMode = DMA_HardTrig;                         // 硬触发模式
     DMA_Init(CW_DMACHANNEL4, &DMA_InitStruct);
     DMA_Cmd(CW_DMACHANNEL4, ENABLE);
 

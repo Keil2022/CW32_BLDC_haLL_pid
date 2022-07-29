@@ -104,8 +104,8 @@ RXD: PA9
 
 使用DMA传输
 
-NTC:			PA4
-母线电压：		PA3
+NTC:		PA4
+母线电压：	PA3
 电机瞬时电压：	PA6
 电机平均电压：	PA7
 

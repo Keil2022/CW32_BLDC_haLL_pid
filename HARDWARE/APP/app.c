@@ -52,9 +52,17 @@ void APP_config(void)
 	
 	ADC_Configuration();		//ADC初始化
 	
-	UART_Configuration();	//串口初始化
+	UART_Configuration();		//串口初始化
 	
 	ATIM_Configuration();	//ATIM PWM初始化
+	PWM_UL_ON;
+	PWM_VL_ON;
+	PWM_WL_ON;
+	delay1ms(50);
+	PWM_UL_OFF;
+	PWM_VL_OFF;
+	PWM_WL_OFF;
+	
 	GTIM2_Configuration();	//GTIM 输入捕获初始化
 	
 	Encoder_Init();			//编码旋钮初始化

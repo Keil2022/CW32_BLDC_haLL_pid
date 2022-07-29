@@ -19,8 +19,8 @@ void LED_Init(void)
 	GPIO_InitStruct.Speed = LED_GPIO_SPEED;
 	
 	GPIO_Init(LED_GPIO, &GPIO_InitStruct);
-	PA11_SETHIGH();
-	PA12_SETHIGH();
+	LED1_OFF;
+	LED2_OFF;
 }
 
 
