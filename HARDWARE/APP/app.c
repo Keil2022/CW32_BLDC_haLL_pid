@@ -55,13 +55,13 @@ void APP_config(void)
 	UART_Configuration();		//串口初始化
 	
 	ATIM_Configuration();	//ATIM PWM初始化
-	PWM_UL_ON;
-	PWM_VL_ON;
-	PWM_WL_ON;
+	PWM_AL_ON;
+	PWM_BL_ON;
+	PWM_CL_ON;
 	delay1ms(50);
-	PWM_UL_OFF;
-	PWM_VL_OFF;
-	PWM_WL_OFF;
+	PWM_AL_OFF;
+	PWM_BL_OFF;
+	PWM_CL_OFF;
 	
 	GTIM2_Configuration();	//GTIM 输入捕获初始化
 	
@@ -170,7 +170,10 @@ void TasksHandle_500MS(void)
 //	OLED_ShowNum(0,48,GTIM_Reed_CNT_Value(CW_GTIM1),5,16);
 //	OLED_ShowChar(0,48,RxDBuffer[0],16);
 	
-	
+	OLED_ShowNum(48,32,SampleData[0],4,16);
+	OLED_ShowNum(88,32,SampleData[1],4,16);
+	OLED_ShowNum(48,48,SampleData[2],4,16);
+	OLED_ShowNum(88,48,SampleData[3],4,16);
 	
 	OLED_Refresh();
 }

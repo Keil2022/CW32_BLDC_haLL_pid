@@ -15,23 +15,28 @@
 #define GPIO_Top_Tube_PIN		(GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10)
 #define GPIO_Top_Tube_SPEED		GPIO_SPEED_HIGH
 
-#define PWM_UH_ON	PA08_SETHIGH();
-#define PWM_UH_OFF	PA08_SETLOW();
+//U+: PA8
+//V+: PA9
+//C+: PA10
+#define PWM_AH_OFF	PA08_SETLOW();
+#define PWM_BH_OFF	PA09_SETLOW();
+#define PWM_CH_OFF	PA10_SETLOW();
 
-#define PWM_VH_ON	PA09_SETHIGH();
-#define PWM_VH_OFF	PA09_SETLOW();
+#define PWM_AH_ON	PA08_SETHIGH();
+#define PWM_BH_ON	PA09_SETHIGH();
+#define PWM_CH_ON	PA10_SETHIGH();
 
-#define PWM_WH_ON	PA10_SETHIGH();
-#define PWM_WH_OFF	PA10_SETLOW();
+//U-: PB13 
+//V-: PB14
+//W-: PB15
+//上管调制，下管开关控制, 上管高电平开关管导通
+#define PWM_AL_OFF	PB13_SETLOW()	//端口清0
+#define PWM_BL_OFF 	PB14_SETLOW()
+#define PWM_CL_OFF 	PB15_SETLOW()
 
-#define PWM_UL_ON	PB13_SETHIGH();
-#define PWM_UL_OFF	PB13_SETLOW();
-
-#define PWM_VL_ON	PB14_SETHIGH();
-#define PWM_VL_OFF	PB14_SETLOW();
-
-#define PWM_WL_ON	PB15_SETHIGH();
-#define PWM_WL_OFF	PB15_SETLOW();
+#define PWM_AL_ON 	PB13_SETHIGH()	//端口置位
+#define PWM_BL_ON 	PB14_SETHIGH()
+#define PWM_CL_ON 	PB15_SETHIGH()
 
 #define Pre ATIM_Prescaler_DIV1		//预分频系数	2^n(0~7)
 #define Rel 3199					//ARR重装载值，取值范围0x0000~0xFFFF	PWM_Frequency = 64M/(PR*(TS+1))	= 20k

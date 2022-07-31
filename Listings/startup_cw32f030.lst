@@ -375,11 +375,11 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
 work --depend=.\objects\startup_cw32f030.d -o.\objects\startup_cw32f030.o -I.\R
-TE\_Target_1 -ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include -ID:\mdk5\ARM\PAC
-K\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include --predefine="__MICROLIB SETA 1"
- --predefine="__UVISION_VERSION SETA 525" --predefine="_RTE_ SETA 1" --predefin
-e="ARMCM0P SETA 1" --list=.\listings\startup_cw32f030.lst User\startup_cw32f030
-.s
+TE\_Target_1 -ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include -ID:\Keil
+_v5\ARM\PACK\ARM\CMSIS\5.4.0\Device\ARM\ARMCM0plus\Include --predefine="__MICRO
+LIB SETA 1" --predefine="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1"
+ --predefine="ARMCM0P SETA 1" --list=.\listings\startup_cw32f030.lst User\start
+up_cw32f030.s
 
 
 

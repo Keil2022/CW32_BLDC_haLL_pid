@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Jul 29 17:01:20 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Jul 31 21:33:14 2022
 <BR><P>
 <H3>Maximum Stack Usage =        224 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -930,10 +930,10 @@ Global Symbols
 <P><STRONG><a name="[56]"></a>OLED_I2C_Init</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, oled_iic.o(i.OLED_I2C_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = OLED_I2C_Init &rArr; I2C_Master_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Master_Init
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Master_Init
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_Cmd
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C1_DeInit
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_config
 </UL>
@@ -941,9 +941,9 @@ Global Symbols
 <P><STRONG><a name="[57]"></a>OLED_Init</STRONG> (Thumb, 180 bytes, Stack size 8 bytes, oled_iic.o(i.OLED_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = OLED_Init &rArr; OLED_Clear &rArr; OLED_Refresh &rArr; WriteDat &rArr; I2C_MasterWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteCmd
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteCmd
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_On
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_config
 </UL>
@@ -951,9 +951,9 @@ Global Symbols
 <P><STRONG><a name="[59]"></a>OLED_Play_1</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, oled_iic.o(i.OLED_Play_1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = OLED_Play_1 &rArr; OLED_ShowString &rArr; OLED_ShowChar &rArr; OLED_DrawPoint
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowChar
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_config
 </UL>
@@ -981,9 +981,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_DrawPoint
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ClearPoint
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowNum
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Play_1
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowString
 </UL>
 
 <P><STRONG><a name="[a2]"></a>OLED_ShowNum</STRONG> (Thumb, 124 bytes, Stack size 48 bytes, oled_iic.o(i.OLED_ShowNum))
@@ -1167,7 +1167,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> task.o(.data)
 </UL>
-<P><STRONG><a name="[3]"></a>TasksHandle_500MS</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, app.o(i.TasksHandle_500MS))
+<P><STRONG><a name="[3]"></a>TasksHandle_500MS</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, app.o(i.TasksHandle_500MS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = TasksHandle_500MS &rArr; OLED_ShowNum &rArr; OLED_ShowChar &rArr; OLED_DrawPoint
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Speed_Count
@@ -1264,9 +1264,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MasterWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
+<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_On
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Refresh
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Display_On
 </UL>
 
 <P><STRONG><a name="[9f]"></a>WriteDat</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, oled_iic.o(i.WriteDat))

@@ -4,18 +4,6 @@
 #include "config.h"
 #include "atim.h"
 
-//U-: PB13 
-//V-: PB14
-//W-: PB15
-//上管调制，下管开关控制, 上管高电平开关管导通
-#define PWM_AL_OFF	PB13_SETLOW()	//端口清0
-#define PWM_BL_OFF 	PB14_SETLOW()
-#define PWM_CL_OFF 	PB15_SETLOW()
-
-#define PWM_AL_ON 	PB13_SETHIGH()	//端口置位
-#define PWM_BL_ON 	PB14_SETHIGH()
-#define PWM_CL_ON 	PB15_SETHIGH()
-
 extern const uint8_t STEP_TAB[6];
 
 extern uint16_t Err_Code;		//电机运转错误代码

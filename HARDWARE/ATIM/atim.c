@@ -37,9 +37,9 @@ void ATIM_Configuration(void)
 	GPIO_InitStruct.Speed = GPIO_Down_Tube_SPEED;	//GPIO速度
 	GPIO_Init(GPIO_Down_Tube, &GPIO_InitStruct);	//配置GPIO
 	
-	PWM_UL_OFF;
-	PWM_VL_OFF;
-	PWM_WL_OFF;
+	PWM_AL_OFF;
+	PWM_BL_OFF;
+	PWM_CL_OFF;
 	
 	GPIO_InitStruct.IT = GPIO_IT_NONE;
 	GPIO_InitStruct.Mode = GPIO_Top_Tube_MODE;		//GPIO模式
@@ -47,9 +47,9 @@ void ATIM_Configuration(void)
 	GPIO_InitStruct.Speed = GPIO_Top_Tube_SPEED;	//GPIO速度
 	GPIO_Init(GPIO_Top_Tube, &GPIO_InitStruct);		//配置GPIO
 	
-	PWM_UH_OFF;
-	PWM_VH_OFF;
-	PWM_WH_OFF;
+	PWM_AH_OFF;
+	PWM_BH_OFF;
+	PWM_CH_OFF;
 	
 	ATIM_InitStruct.BufferState = ENABLE;								//ARR缓存不使能
 	ATIM_InitStruct.ClockSelect	= ATIM_CLOCK_PCLK;						//计数时钟选择:PCLK
