@@ -1,5 +1,5 @@
-#ifndef __MAIN_H
-#define __MAIN_H
+#ifndef __CONFIG_H
+#define __CONFIG_H
 
 #include "base_types.h"
 #include "cw32f030.h"

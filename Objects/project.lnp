@@ -17,6 +17,7 @@
 ".\objects\motor.o"
 ".\objects\encoder.o"
 ".\objects\buzzer.o"
+".\objects\global.o"
 ".\objects\cw32f030_adc.o"
 ".\objects\cw32f030_atim.o"
 ".\objects\cw32f030_awt.o"

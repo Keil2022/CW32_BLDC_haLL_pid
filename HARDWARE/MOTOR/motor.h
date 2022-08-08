@@ -3,13 +3,7 @@
 
 #include "config.h"
 #include "atim.h"
-
-extern const uint8_t STEP_TAB[6];
-
-extern uint16_t Err_Code;		//电机运转错误代码
-extern uint16_t Cur_step; 		//当前HALL状态
-extern uint16_t Motor_Start_F; 	//电机启动运行标志
-extern uint16_t OutPwm;  		//输出PWM
+#include "global.h"
 
 #define RelPWM		(Rel+1)
 #define OUTMAXPWM  	RelPWM			//最大占空比

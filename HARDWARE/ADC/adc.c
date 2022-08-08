@@ -1,9 +1,9 @@
 #include "adc.h"
 
-uint8_t ADC_CR1Array[4] = {0x83, 0x84, 0x86, 0x87}; // 通过更改ADC的CR1寄存器实现ADC通道自动切换
+uint8_t ADC_CR1Array[4] = {0x83, 0x84, 0x87, 0x86}; // 通过更改ADC的CR1寄存器实现ADC通道自动切换
 uint8_t ADC_Start = 0x01;
 
-uint16_t SampleData[4];	//母线电压 NTC 瞬时电流 平均电流
+uint16_t SampleData[4];	//母线电压 NTC 平均电流 瞬时电流 
 
 //========================================================================
 // 函数: void ADC_Configuration(void)
@@ -136,6 +136,39 @@ void DMACH1_IRQHandlerCallBack(void)
     CW_DMACHANNEL4->SRCADDR = (uint32_t)(&ADC_Start);
     CW_DMACHANNEL4->DSTADDR = (uint32_t)(&CW_ADC->START);
     CW_DMACHANNEL4->CSR_f.EN = 1;		
+}
+
+//采集电压电流
+void SampleVI(void)
+{
+	float t;
+	static unsigned char IErCount = 0,	VErCount = 0;	//过压 过流次数
+	
+	//电压比较
+	if(SampleData[2] <= DIin)	CanshuI=0;
+	else 
+	{
+		t = (SampleData[2] - DIin);			  
+		t = t*1.61;					//t=t/4096*3300/4.3/0.1; //0.1欧 
+		CanshuI = t;				
+	}
+	if(CanshuI>=ISH*1000 && Err_Code==0) 	//过流保护
+	{
+		IErCount++;
+		if(IErCount >= NumErr)	Err_Code = 4;	//编号4：过流
+	}
+	else IErCount=0;
+	
+	t = SampleData[0];				//母线电压
+	t = t/4096*3.3/RV1*(RV1+RV2); 	//输入电压与总线电压之比：为RV1:(RV1+RV2)
+	CanshuV=t*10;					//采集母线电压放大10倍
+
+	if(CanshuV>=VSH*10 && Err_Code==0)  //过压判断
+	{
+		VErCount++;
+		if(VErCount >= NumErr)	Err_Code = 6;	//编号6：过压
+	}
+	else VErCount=0;	
 }
 
 

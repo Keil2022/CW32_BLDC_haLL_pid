@@ -2,6 +2,7 @@
 #define __ADC_H
 
 #include "config.h"
+#include "global.h"
 
 #define ADC_GPIO_CLK_ENABLE		__RCC_GPIOA_CLK_ENABLE()
 #define ADC_CLK_ENABLE			__RCC_ADC_CLK_ENABLE()
@@ -13,9 +14,10 @@
 									PA06_ANALOG_ENABLE(); \
 									PA07_ANALOG_ENABLE()
 
-extern uint16_t SampleData[4];	//母线电压 NTC 瞬时电流 平均电流 
+extern uint16_t SampleData[4];	//母线电压 NTC 平均电流 瞬时电流 
 
 void ADC_Configuration(void);
+void SampleVI(void);
 
 #endif
 

@@ -1,7 +1,6 @@
 #include "app.h"
 #include "bmp.h"
-
-uint8_t i = 0;
+#include "global.h"
 
 /*
 两页菜单：1：设定速度、实时速度； 2：母线电压、电流显示。
@@ -66,6 +65,10 @@ void APP_config(void)
 	GTIM2_Configuration();	//GTIM 输入捕获初始化
 	
 	Encoder_Init();			//编码旋钮初始化
+	
+	DIin=0x500;		//偏置电流设定 0.9V-1.1V中间，认为正确
+	if(SampleData[2]>1117 && SampleData[2]<=1500)	DIin = SampleData[2];	
+	SampleVI();		//采集电压电流
 }
 
 //========================================================================
@@ -78,6 +81,11 @@ void APP_config(void)
 void TasksHandle_10MS(void)
 {
 	KEY_Handle();
+}
+
+void TasksHandle_20MS(void)
+{
+	HALL_Check();	//检查霍尔是否正常
 }
 
 void TasksHandle_100MS(void)
@@ -127,7 +135,8 @@ void TasksHandle_250MS(void)
 {
 	PA11_TOG();
 	IWDT_Refresh();
-	
+
+//	测试_PWM	
 //	ATIM_SetCompare1A(0);
 //	ATIM_SetCompare2A(1600);
 //	ATIM_SetCompare3A(0);

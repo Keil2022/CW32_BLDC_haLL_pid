@@ -3,6 +3,7 @@
 static TASK_COMPONENTS Task_Comps[] = 
 {
 	{0, 10,  10,  TasksHandle_10MS},			/* task 1 Period£º 10ms */
+	{0, 20,  20,  TasksHandle_20MS},			/* task 1 Period£º 10ms */
 	{0, 100, 100, TasksHandle_100MS},			/* task 1 Period£º 100ms */
 	{0, 250, 250, TasksHandle_250MS},			/* task 1 Period£º 250ms */
 	{0, 500, 500, TasksHandle_500MS}			/* task 1 Period£º 500ms */

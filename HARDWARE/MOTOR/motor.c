@@ -1,12 +1,5 @@
 #include "motor.h"
 
-const uint8_t STEP_TAB[6]={1,3,2,5,0,4};	//{1,3,2,6,4,5}
-
-uint16_t Err_Code = 0;		//电机运转错误代码
-uint16_t Cur_step = 0; 		//当前HALL状态
-uint16_t Motor_Start_F = 0; //电机启动运行标志
-uint16_t OutPwm = 0;  		//输出PWM
-
 //========================================================================
 // 函数: void Commutation(uint16_t step, uint16_t Out_Pwm_Value, uint16_t Pwm_On_Flag)
 // 描述: 电机控制.
