@@ -2,6 +2,7 @@
 #define __GTIM_H
 
 #include "config.h"
+#include "global.h"
 
 #define GPIO_HALL_A 		CW_GPIOA
 #define GPIO_HALL_A_MODE	GPIO_MODE_INPUT_PULLUP	//上拉输入
@@ -14,9 +15,6 @@
 #define GPIO_HALL_B_SPEED	GPIO_SPEED_HIGH
 
 #define MotorPoles	2		//极对数
-
-extern uint16_t RealS;		//速度
-extern uint16_t HALLcount;	//霍尔脉冲
 
 void GTIM2_Configuration(void);
 void Speed_Count(void);

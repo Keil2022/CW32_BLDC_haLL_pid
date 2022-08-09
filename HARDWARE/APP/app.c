@@ -66,9 +66,12 @@ void APP_config(void)
 	
 	Encoder_Init();			//编码旋钮初始化
 	
+	KKN = (MAXSPEED - MINSPEED);
+	KKN = KKN/(OUTMAXPWM - OUTMINPWM);
+	
 	DIin=0x500;		//偏置电流设定 0.9V-1.1V中间，认为正确
 	if(SampleData[2]>1117 && SampleData[2]<=1500)	DIin = SampleData[2];	
-	SampleVI();		//采集电压电流
+	SampleVI();		//采集母线电压电流，并判断
 }
 
 //========================================================================
@@ -85,50 +88,13 @@ void TasksHandle_10MS(void)
 
 void TasksHandle_20MS(void)
 {
+	Set_Speed();
 	HALL_Check();	//检查霍尔是否正常
 }
 
-void TasksHandle_100MS(void)
+void TasksHandle_200MS(void)
 {	
-	static uint8_t Buzzer_Time;
-	
-	Calculate_PWM_duty();
-	
-	if(OutPwm < PWM_Duty_Load)
-	{
-		OutPwm += OUTMINPWM; //缓启动
-		if(OutPwm >= PWM_Duty_Load) OutPwm = PWM_Duty_Load;
-	}
-	else OutPwm = PWM_Duty_Load;  //实现从电位器上读取AD代码值换算到输出占空比。
-
-
-	if(Motor_Start_F == 1)//电机启动后，及时更新PWM
-		Commutation(STEP_TAB[HALL_Check()-1], OutPwm, Motor_Start_F);//此调用主要及时更新输出占空比	
-	
-	//控制电机启停
-	if(PWM_Duty_Load < OUTMINPWM) 	//小于最小输出时，电机停止运行
-	{	  
-		 if(Motor_Start_F == 1) 	//电机当前在运转
-		 {
-			Motor_Start_F = 0;		//电机停止状态
-			HALL_Motor_Start(); 	//停止电机
-			PA12_SETHIGH();			//LED OFF
-			PB02_SETHIGH();
-			Buzzer_Time = 0;
-		 }					 
-	}
-	else if( (PWM_Duty_Load > OUTMINPWM + 50) && (Motor_Start_F==0) ) //大于最小输出时，开始转
-	{			 			
-		Motor_Start_F = 1;		//改变启停状态
-		OutPwm = OUTMINPWM;
-		HALL_Motor_Start();		//启动电机
-		PA12_SETLOW();			//LED ON
-		PB02_SETHIGH();
-		Buzzer_Time = 0;
-	}
-
-	if(Buzzer_Time < 255)	Buzzer_Time++;
-	if(Buzzer_Time > 3) 	PB02_SETLOW();
+	SampleVI();		//采集母线电压电流，并判断
 }
 
 void TasksHandle_250MS(void)
@@ -187,7 +153,10 @@ void TasksHandle_500MS(void)
 	OLED_Refresh();
 }
 
-
+void State_Machine(void)
+{
+	
+}
 
 
 

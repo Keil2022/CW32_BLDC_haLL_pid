@@ -1,12 +1,5 @@
 #include "encoder.h"
 
-volatile uint8_t Clock_Counter;
-volatile uint8_t Count_1 = 255, Count_2 = 255;
-
-int16_t PWM_Duty_Load = 0;	//PWM加载值
-uint16_t PWM_Duty_Set;		//PWM变化值
-int16_t  CNT_Value, CNT_uValue;
-
 //========================================================================
 // 函数: void Encoder_Init(void)
 // 描述: 旋转编码器初始化.
@@ -38,8 +31,8 @@ void Encoder_Init(void)
 
     //清除PA00中断标志并使能NVIC
 	__disable_irq(); 
-    GPIOB_INTFLAG_CLR(ENCODER_GPIO_PIN);
-	NVIC_SetPriority(GPIOB_IRQn, 1);	//优先级：1
+    //GPIOB_INTFLAG_CLR(ENCODER_GPIO_PIN);
+	//NVIC_SetPriority(GPIOB_IRQn, 1);	//优先级：1
     NVIC_EnableIRQ(GPIOB_IRQn);
 	__enable_irq();
 #endif
@@ -54,19 +47,6 @@ void Encoder_Init(void)
 //========================================================================
 void GPIOB_IRQHandler(void)
 {
-//    if (CW_GPIOB->ISR_f.PIN5)
-//    {
-//        //GPIOB_INTFLAG_CLR(bv5);
-//		GPIOB_INTFLAG_CLR(GPIO_PIN_5);
-//		
-//		//Clock_Counter = 1;
-//		
-//		if( PB04_GETVALUE() == 1 )
-//		{
-//			Clock_Counter = 1;
-//		}
-//    }
-	
     if (CW_GPIOB->ISR_f.PIN4)
     {
         //GPIOB_INTFLAG_CLR(bv4);
@@ -82,36 +62,24 @@ void GPIOB_IRQHandler(void)
 		{
 			Clock_Counter = 1;
 		}
-		
-		//	GPIOB_INTFLAG_CLR(bv5 | bv4);
-		//	if( PB04_GETVALUE() == 0 )
-		//		if( PB05_GETVALUE() == 1 )
-		//			Clock_Counter = 1;
-		//		
-		//	if( PB05_GETVALUE() == 0 )
-		//		if( PB04_GETVALUE() == 1 )
-		//			Clock_Counter = 0;
 			
 		Count_2 = Count_2*3/4 + Count_1/4;
 		Count_1 = 0;
 		
-		if( Count_2 > 200 )			PWM_Duty_Set = 5;
+		if( Count_2 > 200 )			PWM_Duty_Set = 4;
 		else if( Count_2 > 120 )	PWM_Duty_Set = 20;
 		else if( Count_2 > 60 )		PWM_Duty_Set = 40;
 		else if( Count_2 > 30 )		PWM_Duty_Set = 80;
 		else if( Count_2 > 15 )		PWM_Duty_Set = 160;
 		else 						PWM_Duty_Set = 320;
 		
-		
 		if( Clock_Counter )
 		{
 			PWM_Duty_Load += PWM_Duty_Set;
-			PWM_Duty_Load = PWM_Duty_Load > OUTMAXPWM ? OUTMAXPWM : PWM_Duty_Load;
 		}
 		else
 		{
 			PWM_Duty_Load -= PWM_Duty_Set;
-			PWM_Duty_Load = PWM_Duty_Load < 0 ? 0 : PWM_Duty_Load;
 		}
     }
 }
@@ -160,7 +128,7 @@ void GTIM1_Configuration(void)
 	
 	//清除中断标志并使能NVIC
 	__disable_irq(); 
-	NVIC_SetPriority(GTIM1_IRQn, 2);			//优先级：2
+	//NVIC_SetPriority(GTIM1_IRQn, 2);			//优先级：2
     NVIC_EnableIRQ(GTIM1_IRQn);
 	__enable_irq();
 }

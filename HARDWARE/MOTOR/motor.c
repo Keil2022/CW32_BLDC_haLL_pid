@@ -7,7 +7,7 @@
 // 返回: None.
 // 版本: V1.0, 2022年6月9日
 //========================================================================
-void Commutation(uint16_t step, uint16_t Out_Pwm_Value, uint16_t Pwm_On_Flag)
+void Commutation(uint16_t step, uint16_t Pwm_On_Flag)
 {
 	if(Pwm_On_Flag == 0)	//关闭输出
 	{
@@ -21,7 +21,7 @@ void Commutation(uint16_t step, uint16_t Out_Pwm_Value, uint16_t Pwm_On_Flag)
 		PWM_BL_OFF;
 		PWM_CL_OFF;
 		
-		return;							//退出次函数
+		return;							//退出此次函数
 	}
 	
 	PWM_AL_OFF;				//下管关闭
@@ -90,9 +90,18 @@ void HALL_Motor_Start(void)
 	if( x==0 || x==7 )	//霍尔异常时，输出一项，使电机先转起来
 		x = 1;
 	
-	Cur_step = STEP_TAB[x-1];						//得到换相序列
-	Commutation(Cur_step, OutPwm, Motor_Start_F);
+	Cur_step = STEP_TAB[Dir][x-1];						//得到换相序列
+	Commutation(Cur_step, Motor_Start_F);
 }
 
-
+//设置速度
+void Set_Speed(void)
+{
+	if(PWM_Duty_Load < OUTMINPWM) 		SetSpeed = 0;
+	else if(PWM_Duty_Load <= OUTMAXPWM)
+	{
+		SetSpeed = MINSPEED + KKN*(PWM_Duty_Load - OUTMINPWM);
+	}
+	else SetSpeed = MAXSPEED;
+}
 

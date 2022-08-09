@@ -18,6 +18,7 @@ int main(void)
 	
 	while (1)
 	{					
+		State_Machine();
 		Task_Pro_Handler_Callback();
 	}
 }

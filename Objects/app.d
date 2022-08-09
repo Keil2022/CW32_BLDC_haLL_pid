@@ -33,6 +33,7 @@
 .\objects\app.o: .\HARDWARE\ATIM\atim.h
 .\objects\app.o: .\HARDWARE\BTIM\btim.h
 .\objects\app.o: .\HARDWARE\GTIM\gtim.h
+.\objects\app.o: .\HARDWARE\GLOBAL\global.h
 .\objects\app.o: .\HARDWARE\ADC\adc.h
 .\objects\app.o: .\HARDWARE\GLOBAL\global.h
 .\objects\app.o: .\HARDWARE\UART\uart.h

@@ -4,7 +4,7 @@
 #include "config.h"
 #include "motor.h"
 
-#define Encoder_Mode 1
+#define Encoder_Mode 0
 
 #define ENCODER_CLK_ENABLE  __RCC_GPIOB_CLK_ENABLE();    // 使能GPIO的配置时钟
 #define GTIM_CLK_ENABLE		__RCC_GTIM1_CLK_ENABLE();
@@ -23,13 +23,6 @@
 #define ENCODER_GPIO_PIN_1 	(GPIO_PIN_5)
 
 #define GTIM1_ARR			60000
-
-extern volatile uint8_t Clock_Counter;
-extern volatile uint8_t Count_1, Count_2;
-
-extern int16_t PWM_Duty_Load;
-extern uint16_t PWM_Duty_Set;
-extern int16_t  CNT_Value, CNT_uValue;
 
 void Encoder_Init(void);
 void GTIM1_Configuration(void);

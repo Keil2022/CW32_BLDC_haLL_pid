@@ -34,6 +34,7 @@
 .\objects\btim.o: .\HARDWARE\OLED\oled_iic.h
 .\objects\btim.o: .\HARDWARE\ATIM\atim.h
 .\objects\btim.o: .\HARDWARE\GTIM\gtim.h
+.\objects\btim.o: .\HARDWARE\GLOBAL\global.h
 .\objects\btim.o: .\HARDWARE\ADC\adc.h
 .\objects\btim.o: .\HARDWARE\GLOBAL\global.h
 .\objects\btim.o: .\HARDWARE\UART\uart.h

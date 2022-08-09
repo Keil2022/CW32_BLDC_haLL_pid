@@ -26,6 +26,7 @@
 .\objects\gtim.o: .\Libraries\inc\cw32f030_uart.h
 .\objects\gtim.o: .\Libraries\inc\cw32f030_iwdt.h
 .\objects\gtim.o: .\Libraries\inc\cw32f030_dma.h
+.\objects\gtim.o: .\HARDWARE\GLOBAL\global.h
 .\objects\gtim.o: .\HARDWARE\APP\app.h
 .\objects\gtim.o: .\HARDWARE\LED\led.h
 .\objects\gtim.o: .\HARDWARE\KEY\key.h

@@ -35,6 +35,7 @@
 .\objects\main.o: .\HARDWARE\ATIM\atim.h
 .\objects\main.o: .\HARDWARE\BTIM\btim.h
 .\objects\main.o: .\HARDWARE\GTIM\gtim.h
+.\objects\main.o: .\HARDWARE\GLOBAL\global.h
 .\objects\main.o: .\HARDWARE\ADC\adc.h
 .\objects\main.o: .\HARDWARE\GLOBAL\global.h
 .\objects\main.o: .\HARDWARE\UART\uart.h

@@ -21,9 +21,10 @@ void APP_config(void);
 
 void TasksHandle_10MS(void);
 void TasksHandle_20MS(void);
-void TasksHandle_100MS(void);
+void TasksHandle_200MS(void);
 void TasksHandle_250MS(void);
 void TasksHandle_500MS(void);
+void State_Machine(void);
 
 #endif
 

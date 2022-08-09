@@ -34,6 +34,7 @@
 .\objects\task.o: .\HARDWARE\ATIM\atim.h
 .\objects\task.o: .\HARDWARE\BTIM\btim.h
 .\objects\task.o: .\HARDWARE\GTIM\gtim.h
+.\objects\task.o: .\HARDWARE\GLOBAL\global.h
 .\objects\task.o: .\HARDWARE\ADC\adc.h
 .\objects\task.o: .\HARDWARE\GLOBAL\global.h
 .\objects\task.o: .\HARDWARE\UART\uart.h

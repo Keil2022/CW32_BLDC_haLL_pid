@@ -144,12 +144,12 @@ void SampleVI(void)
 	float t;
 	static unsigned char IErCount = 0,	VErCount = 0;	//过压 过流次数
 	
-	//电压比较
+	//电机电压比较
 	if(SampleData[2] <= DIin)	CanshuI=0;
 	else 
 	{
-		t = (SampleData[2] - DIin);			  
-		t = t*1.61;					//t=t/4096*3300/4.3/0.1; //0.1欧 
+		t = (SampleData[2] - DIin);	//运放公式，算出ISEN电压除以采样电阻100R，为电流
+		t = t*1.61;					//t=t/4096*3300/4.3/0.1; //0.1欧
 		CanshuI = t;				
 	}
 	if(CanshuI>=ISH*1000 && Err_Code==0) 	//过流保护

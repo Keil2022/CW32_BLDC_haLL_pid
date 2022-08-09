@@ -1,9 +1,6 @@
 #include "gtim.h"
 #include "app.h"
 
-uint16_t HALLcount = 0;		//霍尔脉冲
-uint16_t RealS;				//速度
-
 //HA: PA15
 //HB: PB3
 //HC: PA2
@@ -95,11 +92,11 @@ void GTIM2_IRQHandler(void)
 		GTIM_ClearITPendingBit(CW_GTIM2, GTIM_IT_CC3);
 	}
 	
-	HALLcount++;									//霍尔脉冲计数	
+	HALLcount++;HALLcount1++;						//霍尔脉冲计数	
 	x = HALL_Check(); 								//读取霍尔状态
-	Cur_step = STEP_TAB[x-1];						//获取换相序位		
+	Cur_step = STEP_TAB[Dir][x-1];					//获取换相序位		
 	if( Motor_Start_F==1 && Err_Code==0 ) 			//根据启停状态 换相
-		Commutation(Cur_step,OutPwm,Motor_Start_F);  
+		Commutation(Cur_step,Motor_Start_F);  
 }
 
 //========================================================================

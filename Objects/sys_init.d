@@ -34,6 +34,7 @@
 .\objects\sys_init.o: .\HARDWARE\ATIM\atim.h
 .\objects\sys_init.o: .\HARDWARE\BTIM\btim.h
 .\objects\sys_init.o: .\HARDWARE\GTIM\gtim.h
+.\objects\sys_init.o: .\HARDWARE\GLOBAL\global.h
 .\objects\sys_init.o: .\HARDWARE\ADC\adc.h
 .\objects\sys_init.o: .\HARDWARE\GLOBAL\global.h
 .\objects\sys_init.o: .\HARDWARE\UART\uart.h
