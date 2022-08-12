@@ -1,6 +1,6 @@
 Dependencies for Project 'project', Target 'Target 1': (DO NOT MODIFY !)
 F (.\User\interrupts_cw32f030.c)(0x62DE5096)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\interrupts_cw32f030.o --omf_browse .\objects\interrupts_cw32f030.crf --depend .\objects\interrupts_cw32f030.d)
-I (User\config.h)(0x62F0CFE8)
+I (User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -27,7 +27,7 @@ I (.\Libraries\inc\cw32f030_uart.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\User\main.c)(0x62F23028)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (User\config.h)(0x62F0CFE8)
+I (User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -62,8 +62,8 @@ I (.\HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
 I (.\HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
 I (.\HARDWARE\BTIM\btim.h)(0x62A05D9C)
-I (.\HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\ADC\adc.h)(0x62F0DB0F)
 I (.\HARDWARE\UART\uart.h)(0x62E3A0AC)
 I (.\HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
@@ -72,7 +72,7 @@ I (.\HARDWARE\ENCODER\encoder.h)(0x62F202CD)
 F (.\User\startup_cw32f030.s)(0x6274DF67)(--cpu Cortex-M0+ --li -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "ARMCM0P SETA 1"--list .\listings\startup_cw32f030.lst --xref -o .\objects\startup_cw32f030.o --depend .\objects\startup_cw32f030.d)
 F (.\User\SYS\sys_init.c)(0x62DE5F99)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\sys_init.o --omf_browse .\objects\sys_init.crf --depend .\objects\sys_init.d)
 I (User\SYS\sys_init.h)(0x629704AB)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -105,8 +105,8 @@ I (.\HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
 I (.\HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
 I (.\HARDWARE\BTIM\btim.h)(0x62A05D9C)
-I (.\HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\ADC\adc.h)(0x62F0DB0F)
 I (.\HARDWARE\UART\uart.h)(0x62E3A0AC)
 I (.\HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
@@ -115,7 +115,7 @@ I (.\HARDWARE\ENCODER\encoder.h)(0x62F202CD)
 F (.\HARDWARE\APP\app.c)(0x62F23028)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
 I (HARDWARE\APP\app.h)(0x62F23028)
 I (.\HARDWARE\LED\led.h)(0x62E3A1DC)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -146,8 +146,8 @@ I (.\HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
 I (.\HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
 I (.\HARDWARE\BTIM\btim.h)(0x62A05D9C)
-I (.\HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\ADC\adc.h)(0x62F0DB0F)
 I (.\HARDWARE\UART\uart.h)(0x62E3A0AC)
 I (.\HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
@@ -158,7 +158,7 @@ F (.\HARDWARE\TASK\task.c)(0x62F20253)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --
 I (HARDWARE\TASK\task.h)(0x6297115B)
 I (.\HARDWARE\APP\app.h)(0x62F23028)
 I (.\HARDWARE\LED\led.h)(0x62E3A1DC)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -189,8 +189,8 @@ I (.\HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
 I (.\HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
 I (.\HARDWARE\BTIM\btim.h)(0x62A05D9C)
-I (.\HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\ADC\adc.h)(0x62F0DB0F)
 I (.\HARDWARE\UART\uart.h)(0x62E3A0AC)
 I (.\HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
@@ -198,7 +198,7 @@ I (.\HARDWARE\MOTOR\motor.h)(0x62F23028)
 I (.\HARDWARE\ENCODER\encoder.h)(0x62F202CD)
 F (.\HARDWARE\LED\led.c)(0x62E3A1DC)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
 I (HARDWARE\LED\led.h)(0x62E3A1DC)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -226,7 +226,7 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\KEY\key.c)(0x62A2B99E)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
 I (HARDWARE\KEY\key.h)(0x62A1A87C)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -254,7 +254,7 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\OLED\oled_iic.c)(0x62AF4C89)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\oled_iic.o --omf_browse .\objects\oled_iic.crf --depend .\objects\oled_iic.d)
 I (HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -283,7 +283,7 @@ I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 I (HARDWARE\OLED\oledfont.h)(0x629DB23B)
 F (.\HARDWARE\ADC\adc.c)(0x62F1F3E1)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
 I (HARDWARE\ADC\adc.h)(0x62F0DB0F)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -309,10 +309,10 @@ I (.\Libraries\inc\cw32f030_adc.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_uart.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 F (.\HARDWARE\UART\uart.c)(0x62E3A089)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
 I (HARDWARE\UART\uart.h)(0x62E3A0AC)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -340,7 +340,7 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\IWDT\iwdt.c)(0x62A7466A)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\iwdt.o --omf_browse .\objects\iwdt.crf --depend .\objects\iwdt.d)
 I (HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -368,7 +368,7 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\ATIM\atim.c)(0x62F0C343)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\atim.o --omf_browse .\objects\atim.crf --depend .\objects\atim.d)
 I (HARDWARE\ATIM\atim.h)(0x62F0C343)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -396,7 +396,7 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\BTIM\btim.c)(0x62A304EE)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\btim.o --omf_browse .\objects\btim.crf --depend .\objects\btim.d)
 I (HARDWARE\BTIM\btim.h)(0x62A05D9C)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -429,16 +429,16 @@ I (.\HARDWARE\KEY\key.h)(0x62A1A87C)
 I (.\HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
 I (.\HARDWARE\OLED\oled_iic.h)(0x62A73C0F)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
-I (.\HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\ADC\adc.h)(0x62F0DB0F)
 I (.\HARDWARE\UART\uart.h)(0x62E3A0AC)
 I (.\HARDWARE\IWDT\iwdt.h)(0x629F1EEA)
 I (.\HARDWARE\MOTOR\motor.h)(0x62F23028)
 I (.\HARDWARE\ENCODER\encoder.h)(0x62F202CD)
 F (.\HARDWARE\GTIM\gtim.c)(0x62F23028)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\gtim.o --omf_browse .\objects\gtim.crf --depend .\objects\gtim.d)
-I (HARDWARE\GTIM\gtim.h)(0x62F23028)
-I (.\User\config.h)(0x62F0CFE8)
+I (HARDWARE\GTIM\gtim.h)(0x62F5F99B)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -464,7 +464,7 @@ I (.\Libraries\inc\cw32f030_adc.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_uart.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 I (.\HARDWARE\APP\app.h)(0x62F23028)
 I (.\HARDWARE\LED\led.h)(0x62E3A1DC)
 I (.\HARDWARE\KEY\key.h)(0x62A1A87C)
@@ -479,7 +479,7 @@ I (.\HARDWARE\MOTOR\motor.h)(0x62F23028)
 I (.\HARDWARE\ENCODER\encoder.h)(0x62F202CD)
 F (.\HARDWARE\MOTOR\motor.c)(0x62F23117)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\motor.o --omf_browse .\objects\motor.crf --depend .\objects\motor.d)
 I (HARDWARE\MOTOR\motor.h)(0x62F23028)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -506,10 +506,10 @@ I (.\Libraries\inc\cw32f030_uart.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
-F (.\HARDWARE\ENCODER\encoder.c)(0x62F202CD)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\encoder.o --omf_browse .\objects\encoder.crf --depend .\objects\encoder.d)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
+F (.\HARDWARE\ENCODER\encoder.c)(0x62F5D8AD)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\encoder.o --omf_browse .\objects\encoder.crf --depend .\objects\encoder.d)
 I (HARDWARE\ENCODER\encoder.h)(0x62F202CD)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -537,10 +537,10 @@ I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 I (.\HARDWARE\MOTOR\motor.h)(0x62F23028)
 I (.\HARDWARE\ATIM\atim.h)(0x62F0C343)
-I (.\HARDWARE\GLOBAL\global.h)(0x62F230DF)
+I (.\HARDWARE\GLOBAL\global.h)(0x62F5F960)
 F (.\HARDWARE\BUZZER\buzzer.c)(0x62A89D38)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\buzzer.o --omf_browse .\objects\buzzer.crf --depend .\objects\buzzer.d)
 I (HARDWARE\BUZZER\buzzer.h)(0x62A89DF3)
-I (.\User\config.h)(0x62F0CFE8)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
@@ -567,8 +567,8 @@ I (.\Libraries\inc\cw32f030_uart.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_iwdt.h)(0x6274DF67)
 I (.\Libraries\inc\cw32f030_dma.h)(0x6274DF67)
 F (.\HARDWARE\GLOBAL\global.c)(0x62F2314D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB --li -g -O0 --apcs=interwork --split_sections -I .\Libraries\inc -I .\Libraries\src -I .\User -I .\HARDWARE\LED -I .\User\SYS -I .\HARDWARE\OLED -I .\HARDWARE\GTIM -I .\HARDWARE\APP -I .\HARDWARE\TASK -I .\HARDWARE\ADC -I .\HARDWARE\UART -I .\HARDWARE\IWDT -I .\HARDWARE\BTIM -I .\HARDWARE\ATIM -I .\HARDWARE\MOTOR -I .\HARDWARE\KEY -I .\HARDWARE\ENCODER -I .\HARDWARE\BUZZER -I .\HARDWARE\GLOBAL-I.\RTE\_Target_1-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\mdk5\ARM\PACK\ARM\CMSIS\5.3.0\Device\ARM\ARMCM0plus\Include-D__UVISION_VERSION="525" -D_RTE_ -DARMCM0P-o .\objects\global.o --omf_browse .\objects\global.crf --depend .\objects\global.d)
-I (HARDWARE\GLOBAL\global.h)(0x62F230DF)
-I (.\User\config.h)(0x62F0CFE8)
+I (HARDWARE\GLOBAL\global.h)(0x62F5F960)
+I (.\User\config.h)(0x62F5F980)
 I (.\Libraries\inc\base_types.h)(0x6274DF67)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x599ECD2C)
 I (D:\mdk5\ARM\ARMCC\include\string.h)(0x599ECD2C)
