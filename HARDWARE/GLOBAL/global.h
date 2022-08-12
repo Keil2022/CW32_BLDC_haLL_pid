@@ -1,5 +1,5 @@
-//#ifndef __GLOBAL_H
-//#define __GLOBAL_H
+#ifndef __GLOBAL_H
+#define __GLOBAL_H
 
 #include "config.h"
 
@@ -8,7 +8,7 @@
 #define RV2	200
 //输入电压与总线电压之比：为RV1:(RV1+RV2)
 
-#define Kvvalue (float)1.2/RV1*(RV1+RV2)
+#define Kvvalue (float)1.2/RV1*(RV1+RV2) 
 
 //过流过压错误认定次数
 #define NumErr 15
@@ -60,6 +60,6 @@ extern int16_t  CNT_Value, CNT_uValue;
 extern uint16_t RealS;		//速度
 extern uint16_t HALLcount, HALLcount1;	//霍尔脉冲
 
-//#endif
+#endif
 
 

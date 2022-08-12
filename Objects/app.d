@@ -35,11 +35,8 @@
 .\objects\app.o: .\HARDWARE\GTIM\gtim.h
 .\objects\app.o: .\HARDWARE\GLOBAL\global.h
 .\objects\app.o: .\HARDWARE\ADC\adc.h
-.\objects\app.o: .\HARDWARE\GLOBAL\global.h
 .\objects\app.o: .\HARDWARE\UART\uart.h
 .\objects\app.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\app.o: .\HARDWARE\MOTOR\motor.h
-.\objects\app.o: .\HARDWARE\GLOBAL\global.h
 .\objects\app.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\app.o: .\HARDWARE\OLED\bmp.h
-.\objects\app.o: .\HARDWARE\GLOBAL\global.h

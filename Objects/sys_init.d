@@ -36,9 +36,7 @@
 .\objects\sys_init.o: .\HARDWARE\GTIM\gtim.h
 .\objects\sys_init.o: .\HARDWARE\GLOBAL\global.h
 .\objects\sys_init.o: .\HARDWARE\ADC\adc.h
-.\objects\sys_init.o: .\HARDWARE\GLOBAL\global.h
 .\objects\sys_init.o: .\HARDWARE\UART\uart.h
 .\objects\sys_init.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\sys_init.o: .\HARDWARE\MOTOR\motor.h
-.\objects\sys_init.o: .\HARDWARE\GLOBAL\global.h
 .\objects\sys_init.o: .\HARDWARE\ENCODER\encoder.h

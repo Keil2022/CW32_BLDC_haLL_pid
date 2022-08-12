@@ -37,9 +37,7 @@
 .\objects\main.o: .\HARDWARE\GTIM\gtim.h
 .\objects\main.o: .\HARDWARE\GLOBAL\global.h
 .\objects\main.o: .\HARDWARE\ADC\adc.h
-.\objects\main.o: .\HARDWARE\GLOBAL\global.h
 .\objects\main.o: .\HARDWARE\UART\uart.h
 .\objects\main.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\main.o: .\HARDWARE\MOTOR\motor.h
-.\objects\main.o: .\HARDWARE\GLOBAL\global.h
 .\objects\main.o: .\HARDWARE\ENCODER\encoder.h
