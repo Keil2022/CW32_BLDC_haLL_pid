@@ -23,7 +23,7 @@ unsigned int  MAXSPEED = 5000; 	//额定转速
 //速度闭环参数  实际缩小1000倍
 unsigned int  MINSPEED = 150;  		//最低转速
 unsigned int SP=50, SI=50, SD=50;
-float KKN = 0;	//计算电位器速度时的斜率
+float KKN = 0;						//计算电位器速度时的斜率
 
 unsigned int SetSpeed = 0;	//电机速度
 
