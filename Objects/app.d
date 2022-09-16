@@ -39,4 +39,5 @@
 .\objects\app.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\app.o: .\HARDWARE\MOTOR\motor.h
 .\objects\app.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\app.o: .\HARDWARE\MOTOR\motor.h
 .\objects\app.o: .\HARDWARE\OLED\bmp.h

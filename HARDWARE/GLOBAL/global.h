@@ -46,7 +46,7 @@ extern unsigned int SP, SI, SD;
 
 extern float KKN;	//计算电位器速度时的斜率
 
-extern unsigned int SetSpeed;	//电机速度
+extern int SetSpeed;	//电机速度
 
 extern volatile uint8_t Clock_Counter;
 extern volatile uint8_t Count_1, Count_2;

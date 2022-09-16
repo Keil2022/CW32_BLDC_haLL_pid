@@ -41,3 +41,4 @@
 .\objects\main.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\main.o: .\HARDWARE\MOTOR\motor.h
 .\objects\main.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\main.o: .\HARDWARE\MOTOR\motor.h

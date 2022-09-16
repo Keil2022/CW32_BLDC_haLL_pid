@@ -39,3 +39,4 @@
 .\objects\gtim.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\gtim.o: .\HARDWARE\MOTOR\motor.h
 .\objects\gtim.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\gtim.o: .\HARDWARE\MOTOR\motor.h

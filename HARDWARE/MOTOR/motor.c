@@ -97,11 +97,18 @@ void HALL_Motor_Start(void)
 //…Ë÷√ÀŸ∂»
 void Set_Speed(void)
 {
-	if(PWM_Duty_Load < OUTMINPWM) 		SetSpeed = 0;
-	else if(PWM_Duty_Load <= OUTMAXPWM)
+//	if(PWM_Duty_Load < OUTMINPWM) 		SetSpeed = 0;
+//	else if(PWM_Duty_Load <= OUTMAXPWM)
+//	{
+//		SetSpeed = MINSPEED + KKN*(PWM_Duty_Load - OUTMINPWM);
+//	}
+//	else SetSpeed = MAXSPEED;
+	
+	if( GFP_abs(SetSpeed) > MAXSPEED )
 	{
-		SetSpeed = MINSPEED + KKN*(PWM_Duty_Load - OUTMINPWM);
+		if(SetSpeed>0)	SetSpeed = MAXSPEED;
+		else			SetSpeed = -MAXSPEED;
 	}
-	else SetSpeed = MAXSPEED;
+	else if(GFP_abs(SetSpeed) < MINSPEED)	SetSpeed = 0;
 }
 

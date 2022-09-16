@@ -40,3 +40,4 @@
 .\objects\btim.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\btim.o: .\HARDWARE\MOTOR\motor.h
 .\objects\btim.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\btim.o: .\HARDWARE\MOTOR\motor.h

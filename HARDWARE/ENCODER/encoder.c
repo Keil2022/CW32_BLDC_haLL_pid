@@ -47,7 +47,9 @@ void Encoder_Init(void)
 //========================================================================
 void GPIOB_IRQHandler(void)
 {
-    if (CW_GPIOB->ISR_f.PIN4)
+    unsigned int LoadSpeed = 0;	//速度变化加载值
+	
+	if (CW_GPIOB->ISR_f.PIN4)
     {
         //GPIOB_INTFLAG_CLR(bv4);
 		GPIOB_INTFLAG_CLR(GPIO_PIN_4);
@@ -65,22 +67,38 @@ void GPIOB_IRQHandler(void)
 			
 		Count_2 = Count_2*3/4 + Count_1/4;
 		Count_1 = 0;
-		
-		if( Count_2 > 200 )			PWM_Duty_Set = 4;
-		else if( Count_2 > 120 )	PWM_Duty_Set = 20;
-		else if( Count_2 > 60 )		PWM_Duty_Set = 40;
-		else if( Count_2 > 30 )		PWM_Duty_Set = 80;
-		else if( Count_2 > 15 )		PWM_Duty_Set = 160;
-		else 						PWM_Duty_Set = 320;
+
+		if( Count_2 > 200 )			LoadSpeed = 4;
+		else if( Count_2 > 120 )	LoadSpeed = 20;
+		else if( Count_2 > 60 )		LoadSpeed = 40;
+		else if( Count_2 > 30 )		LoadSpeed = 80;
+		else if( Count_2 > 15 )		LoadSpeed = 160;
+		else 						LoadSpeed = 320;
 		
 		if( Clock_Counter )
 		{
-			PWM_Duty_Load += PWM_Duty_Set;
+			SetSpeed += LoadSpeed;
 		}
 		else
 		{
-			PWM_Duty_Load -= PWM_Duty_Set;
+			SetSpeed -= LoadSpeed;
 		}
+		
+//		if( Count_2 > 200 )			PWM_Duty_Set = 4;
+//		else if( Count_2 > 120 )	PWM_Duty_Set = 20;
+//		else if( Count_2 > 60 )		PWM_Duty_Set = 40;
+//		else if( Count_2 > 30 )		PWM_Duty_Set = 80;
+//		else if( Count_2 > 15 )		PWM_Duty_Set = 160;
+//		else 						PWM_Duty_Set = 320;
+//		
+//		if( Clock_Counter )
+//		{
+//			PWM_Duty_Load += PWM_Duty_Set;
+//		}
+//		else
+//		{
+//			PWM_Duty_Load -= PWM_Duty_Set;
+//		}
     }
 }
 

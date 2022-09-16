@@ -28,3 +28,5 @@
 .\objects\motor.o: .\Libraries\inc\cw32f030_dma.h
 .\objects\motor.o: .\HARDWARE\ATIM\atim.h
 .\objects\motor.o: .\HARDWARE\GLOBAL\global.h
+.\objects\motor.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\motor.o: .\HARDWARE\MOTOR\motor.h

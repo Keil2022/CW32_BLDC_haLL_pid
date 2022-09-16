@@ -25,7 +25,7 @@ unsigned int  MINSPEED = 150;  		//最低转速
 unsigned int SP=50, SI=50, SD=50;
 float KKN = 0;						//计算电位器速度时的斜率
 
-unsigned int SetSpeed = 0;	//电机速度
+int SetSpeed = 0;	//电机目标速度
 
 volatile uint8_t Clock_Counter;
 volatile uint8_t Count_1 = 255, Count_2 = 255;

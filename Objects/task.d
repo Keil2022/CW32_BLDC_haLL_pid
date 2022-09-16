@@ -40,3 +40,4 @@
 .\objects\task.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\task.o: .\HARDWARE\MOTOR\motor.h
 .\objects\task.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\task.o: .\HARDWARE\MOTOR\motor.h

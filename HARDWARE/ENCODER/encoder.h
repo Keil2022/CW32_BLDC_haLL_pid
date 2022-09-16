@@ -28,6 +28,7 @@ void Encoder_Init(void);
 void GTIM1_Configuration(void);
 uint32_t GTIM_Reed_CNT_Value(GTIM_TypeDef *GTIMx);
 void Calculate_PWM_duty(void);
+int GFP_abs(int p);
 
 #endif
 

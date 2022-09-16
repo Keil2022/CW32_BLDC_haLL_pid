@@ -4,6 +4,7 @@
 #include "config.h"
 #include "atim.h"
 #include "global.h"
+#include "encoder.h"
 
 #define RelPWM		(Rel+1)
 #define OUTMAXPWM  	RelPWM			//最大占空比

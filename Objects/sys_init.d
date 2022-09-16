@@ -40,3 +40,4 @@
 .\objects\sys_init.o: .\HARDWARE\IWDT\iwdt.h
 .\objects\sys_init.o: .\HARDWARE\MOTOR\motor.h
 .\objects\sys_init.o: .\HARDWARE\ENCODER\encoder.h
+.\objects\sys_init.o: .\HARDWARE\MOTOR\motor.h

@@ -29,3 +29,4 @@
 .\objects\encoder.o: .\HARDWARE\MOTOR\motor.h
 .\objects\encoder.o: .\HARDWARE\ATIM\atim.h
 .\objects\encoder.o: .\HARDWARE\GLOBAL\global.h
+.\objects\encoder.o: .\HARDWARE\ENCODER\encoder.h
