@@ -112,3 +112,10 @@ void Set_Speed(void)
 	else if(GFP_abs(SetSpeed) < MINSPEED)	SetSpeed = 0;
 }
 
+//更新占空比
+void UPPWM(void)
+{	
+	if(STEP_last==0||STEP_last==1){	 CW_ATIM->CH2CCRA=0;CW_ATIM->CH3CCRA=0; CW_ATIM->CH1CCRA=OutPwmValue;	}
+	if(STEP_last==2||STEP_last==3){	 CW_ATIM->CH1CCRA=0;CW_ATIM->CH3CCRA=0;CW_ATIM->CH2CCRA=OutPwmValue;	}
+	if(STEP_last==4||STEP_last==5){	 CW_ATIM->CH1CCRA=0;CW_ATIM->CH2CCRA=0;CW_ATIM->CH3CCRA=OutPwmValue;	}
+}

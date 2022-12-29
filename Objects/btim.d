@@ -41,3 +41,5 @@
 .\objects\btim.o: .\HARDWARE\MOTOR\motor.h
 .\objects\btim.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\btim.o: .\HARDWARE\MOTOR\motor.h
+.\objects\btim.o: .\HARDWARE\CONTROL\control.h
+.\objects\btim.o: .\HARDWARE\PID\pid.h

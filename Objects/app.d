@@ -40,4 +40,6 @@
 .\objects\app.o: .\HARDWARE\MOTOR\motor.h
 .\objects\app.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\app.o: .\HARDWARE\MOTOR\motor.h
+.\objects\app.o: .\HARDWARE\CONTROL\control.h
+.\objects\app.o: .\HARDWARE\PID\pid.h
 .\objects\app.o: .\HARDWARE\OLED\bmp.h

@@ -95,6 +95,7 @@ void TasksHandle_20MS(void)
 void TasksHandle_200MS(void)
 {	
 	SampleVI();		//采集母线电压电流，并判断
+	Speed_Count();
 }
 
 void TasksHandle_250MS(void)
@@ -139,7 +140,6 @@ void TasksHandle_500MS(void)
 
 	//ADC_Result = ADC_GetConversionValue();
 
-	Speed_Count();
 	OLED_ShowNum(48,16,RealS,4,16);
 //	OLED_ShowNum(0,48,HALL_Check(),1,16);
 //	OLED_ShowNum(0,48,GTIM_Reed_CNT_Value(CW_GTIM1),5,16);
@@ -155,7 +155,40 @@ void TasksHandle_500MS(void)
 
 void State_Machine(void)	//状态机
 {
-	
+	if( Err_Code != 0  &&  MOTORSTATE != STATEERROR  &&  MOTORSTATE != STATEERROROVER )//发生故障
+	{  
+		MOTORSTATE = STATEERROR;
+	}
+
+	//状态机	
+	switch(MOTORSTATE)
+	{
+		case STATESTARTCHECK:  	
+						EnDirCheck();				 
+						MotorStartCheck();			      
+						break;
+		
+		case STATESTARTPID:
+						MotorStartPID();	
+						break;
+		
+		case STATERUNPID: 
+						MotorRunPID();
+						EnDirCheck();
+						break;
+		
+		case STATESTOP: MotorStop();	break;
+		
+		case STATEERROR:							
+						//sprintf(temp_buff," ERROR Happen!  ");  //输出显示占空比
+						//sprintf(temp_buff1," CODE is: %d      ",Err_Code);	//显示电机转速
+						//OLED_ShowStr(0,0,temp_buff,2);	
+						//OLED_ShowStr(0,4,temp_buff1,2);	
+						//MotorError();
+						break;
+		
+		case STATEERROROVER: MotorErrorOver();	break;
+	}
 }
 
 

@@ -41,3 +41,5 @@
 .\objects\sys_init.o: .\HARDWARE\MOTOR\motor.h
 .\objects\sys_init.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\sys_init.o: .\HARDWARE\MOTOR\motor.h
+.\objects\sys_init.o: .\HARDWARE\CONTROL\control.h
+.\objects\sys_init.o: .\HARDWARE\PID\pid.h

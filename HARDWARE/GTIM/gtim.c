@@ -109,8 +109,22 @@ void GTIM2_IRQHandler(void)
 void Speed_Count(void)
 {
 	//计算速度
-	RealS = HALLcount*20 / MotorPoles;	//计算实测电机RPM
+	RealS = HALLcount*50 / MotorPoles;	//计算实测电机RPM
 	HALLcount = 0;
+	
+	if( MOTORSTATE == STATESTARTPID || MOTORSTATE == STATERUNPID )
+	{
+		if(RealS < 120)
+		{
+			DZCount++;
+			if(DZCount >= 10)	//2S保护
+			{ 								
+				DZCount = 0;
+				Err_Code = 7;	//堵转 速度低的故障判断
+			}
+		}
+		else DZCount = 0;
+	}
 }
 
 

@@ -42,3 +42,5 @@
 .\objects\main.o: .\HARDWARE\MOTOR\motor.h
 .\objects\main.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\main.o: .\HARDWARE\MOTOR\motor.h
+.\objects\main.o: .\HARDWARE\CONTROL\control.h
+.\objects\main.o: .\HARDWARE\PID\pid.h

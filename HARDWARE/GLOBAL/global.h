@@ -20,6 +20,11 @@
 #define STATEERROR 		5
 #define STATEERROROVER 	6
 
+extern unsigned char MOTORSTATE;
+
+extern unsigned char DZCount;
+extern char temp_buff[100], temp_buff1[50];
+
 extern unsigned int DIin; 		//电机电流偏置
 extern unsigned int CanshuV;	//母线电压100mV为单位
 extern unsigned int CanshuI;	//母线电流mA
@@ -59,6 +64,10 @@ extern int16_t  CNT_Value, CNT_uValue;
 
 extern uint16_t RealS;		//速度
 extern uint16_t HALLcount, HALLcount1;	//霍尔脉冲
+
+extern unsigned int startflag, dirflag;
+
+extern unsigned int OutPwmValue;
 
 #endif
 

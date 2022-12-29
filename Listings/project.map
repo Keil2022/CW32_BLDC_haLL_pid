@@ -88,13 +88,14 @@ Section Cross References
     app.o(i.APP_config) refers to adc.o(i.SampleVI) for SampleVI
     app.o(i.APP_config) refers to global.o(.data) for MAXSPEED
     app.o(i.APP_config) refers to adc.o(.data) for SampleData
+    app.o(i.State_Machine) refers to global.o(.data) for Err_Code
     app.o(i.TasksHandle_10MS) refers to key.o(i.KEY_Handle) for KEY_Handle
     app.o(i.TasksHandle_200MS) refers to adc.o(i.SampleVI) for SampleVI
+    app.o(i.TasksHandle_200MS) refers to gtim.o(i.Speed_Count) for Speed_Count
     app.o(i.TasksHandle_20MS) refers to motor.o(i.Set_Speed) for Set_Speed
     app.o(i.TasksHandle_20MS) refers to motor.o(i.HALL_Check) for HALL_Check
     app.o(i.TasksHandle_250MS) refers to cw32f030_iwdt.o(i.IWDT_Refresh) for IWDT_Refresh
     app.o(i.TasksHandle_500MS) refers to oled_iic.o(i.OLED_ShowNum) for OLED_ShowNum
-    app.o(i.TasksHandle_500MS) refers to gtim.o(i.Speed_Count) for Speed_Count
     app.o(i.TasksHandle_500MS) refers to oled_iic.o(i.OLED_Refresh) for OLED_Refresh
     app.o(i.TasksHandle_500MS) refers to global.o(.data) for PWM_Duty_Load
     app.o(i.TasksHandle_500MS) refers to adc.o(.data) for SampleData
@@ -1238,49 +1239,49 @@ Image Symbol Table
     i.SampleVI                               0x00002728   Section        0  adc.o(i.SampleVI)
     i.Set_Speed                              0x00002884   Section        0  motor.o(i.Set_Speed)
     i.Speed_Count                            0x000028d8   Section        0  gtim.o(i.Speed_Count)
-    i.State_Machine                          0x00002900   Section        0  app.o(i.State_Machine)
-    i.SysTick_Handler                        0x00002904   Section        0  cw32f030_systick.o(i.SysTick_Handler)
-    i.SystemCoreClockUpdate                  0x0000291c   Section        0  system_cw32f030.o(i.SystemCoreClockUpdate)
-    i.SystemInit                             0x0000292c   Section        0  system_cw32f030.o(i.SystemInit)
-    i.Task_Marks_Handler_Callback            0x00002968   Section        0  task.o(i.Task_Marks_Handler_Callback)
-    i.Task_Pro_Handler_Callback              0x000029cc   Section        0  task.o(i.Task_Pro_Handler_Callback)
-    i.TasksHandle_10MS                       0x00002a08   Section        0  app.o(i.TasksHandle_10MS)
-    i.TasksHandle_200MS                      0x00002a10   Section        0  app.o(i.TasksHandle_200MS)
-    i.TasksHandle_20MS                       0x00002a18   Section        0  app.o(i.TasksHandle_20MS)
-    i.TasksHandle_250MS                      0x00002a24   Section        0  app.o(i.TasksHandle_250MS)
-    i.TasksHandle_500MS                      0x00002a38   Section        0  app.o(i.TasksHandle_500MS)
-    i.UART1_IRQHandleCallback                0x00002ac8   Section        0  uart.o(i.UART1_IRQHandleCallback)
-    i.UART1_IRQHandler                       0x00002af4   Section        0  interrupts_cw32f030.o(i.UART1_IRQHandler)
-    i.UART2_IRQHandler                       0x00002afc   Section        0  interrupts_cw32f030.o(i.UART2_IRQHandler)
-    i.UART3_IRQHandler                       0x00002afe   Section        0  interrupts_cw32f030.o(i.UART3_IRQHandler)
-    i.UART_Configuration                     0x00002b00   Section        0  uart.o(i.UART_Configuration)
-    i.USART_ClearITPendingBit                0x00002bd0   Section        0  cw32f030_uart.o(i.USART_ClearITPendingBit)
-    i.USART_GetITStatus                      0x00002bd8   Section        0  cw32f030_uart.o(i.USART_GetITStatus)
-    i.USART_ITConfig                         0x00002bea   Section        0  cw32f030_uart.o(i.USART_ITConfig)
-    i.USART_Init                             0x00002c04   Section        0  cw32f030_uart.o(i.USART_Init)
-    i.USART_ReceiveData_8bit                 0x00002d78   Section        0  cw32f030_uart.o(i.USART_ReceiveData_8bit)
-    i.USART_SendData_8bit                    0x00002d80   Section        0  cw32f030_uart.o(i.USART_SendData_8bit)
-    i.VC1_IRQHandler                         0x00002d84   Section        0  interrupts_cw32f030.o(i.VC1_IRQHandler)
-    i.VC2_IRQHandler                         0x00002d86   Section        0  interrupts_cw32f030.o(i.VC2_IRQHandler)
-    i.WDT_IRQHandler                         0x00002d88   Section        0  interrupts_cw32f030.o(i.WDT_IRQHandler)
-    i.WriteCmd                               0x00002d8c   Section        0  oled_iic.o(i.WriteCmd)
-    i.WriteDat                               0x00002da0   Section        0  oled_iic.o(i.WriteDat)
-    i.__ARM_clz                              0x00002db4   Section        0  depilogue.o(i.__ARM_clz)
-    i.__ARM_common_switch8                   0x00002de2   Section        0  cw32f030_i2c.o(i.__ARM_common_switch8)
-    i.__NVIC_EnableIRQ                       0x00002e00   Section        0  encoder.o(i.__NVIC_EnableIRQ)
-    __NVIC_EnableIRQ                         0x00002e01   Thumb Code    18  encoder.o(i.__NVIC_EnableIRQ)
-    i.__NVIC_SetPriority                     0x00002e18   Section        0  uart.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x00002e19   Thumb Code   110  uart.o(i.__NVIC_SetPriority)
-    i.__NVIC_SetPriority                     0x00002e90   Section        0  gtim.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x00002e91   Thumb Code   110  gtim.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x00002f08   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00002f16   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00002f18   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.delay1ms                               0x00002f28   Section        0  system_cw32f030.o(i.delay1ms)
-    i.main                                   0x00002f80   Section        0  main.o(i.main)
-    .constdata                               0x00002f90   Section     6080  oled_iic.o(.constdata)
-    .constdata                               0x00004750   Section       12  global.o(.constdata)
-    .constdata                               0x0000475c   Section      100  cw32f030_rcc.o(.constdata)
+    i.State_Machine                          0x00002948   Section        0  app.o(i.State_Machine)
+    i.SysTick_Handler                        0x00002970   Section        0  cw32f030_systick.o(i.SysTick_Handler)
+    i.SystemCoreClockUpdate                  0x00002988   Section        0  system_cw32f030.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x00002998   Section        0  system_cw32f030.o(i.SystemInit)
+    i.Task_Marks_Handler_Callback            0x000029d4   Section        0  task.o(i.Task_Marks_Handler_Callback)
+    i.Task_Pro_Handler_Callback              0x00002a38   Section        0  task.o(i.Task_Pro_Handler_Callback)
+    i.TasksHandle_10MS                       0x00002a74   Section        0  app.o(i.TasksHandle_10MS)
+    i.TasksHandle_200MS                      0x00002a7c   Section        0  app.o(i.TasksHandle_200MS)
+    i.TasksHandle_20MS                       0x00002a88   Section        0  app.o(i.TasksHandle_20MS)
+    i.TasksHandle_250MS                      0x00002a94   Section        0  app.o(i.TasksHandle_250MS)
+    i.TasksHandle_500MS                      0x00002aa8   Section        0  app.o(i.TasksHandle_500MS)
+    i.UART1_IRQHandleCallback                0x00002b34   Section        0  uart.o(i.UART1_IRQHandleCallback)
+    i.UART1_IRQHandler                       0x00002b60   Section        0  interrupts_cw32f030.o(i.UART1_IRQHandler)
+    i.UART2_IRQHandler                       0x00002b68   Section        0  interrupts_cw32f030.o(i.UART2_IRQHandler)
+    i.UART3_IRQHandler                       0x00002b6a   Section        0  interrupts_cw32f030.o(i.UART3_IRQHandler)
+    i.UART_Configuration                     0x00002b6c   Section        0  uart.o(i.UART_Configuration)
+    i.USART_ClearITPendingBit                0x00002c3c   Section        0  cw32f030_uart.o(i.USART_ClearITPendingBit)
+    i.USART_GetITStatus                      0x00002c44   Section        0  cw32f030_uart.o(i.USART_GetITStatus)
+    i.USART_ITConfig                         0x00002c56   Section        0  cw32f030_uart.o(i.USART_ITConfig)
+    i.USART_Init                             0x00002c70   Section        0  cw32f030_uart.o(i.USART_Init)
+    i.USART_ReceiveData_8bit                 0x00002de4   Section        0  cw32f030_uart.o(i.USART_ReceiveData_8bit)
+    i.USART_SendData_8bit                    0x00002dec   Section        0  cw32f030_uart.o(i.USART_SendData_8bit)
+    i.VC1_IRQHandler                         0x00002df0   Section        0  interrupts_cw32f030.o(i.VC1_IRQHandler)
+    i.VC2_IRQHandler                         0x00002df2   Section        0  interrupts_cw32f030.o(i.VC2_IRQHandler)
+    i.WDT_IRQHandler                         0x00002df4   Section        0  interrupts_cw32f030.o(i.WDT_IRQHandler)
+    i.WriteCmd                               0x00002df8   Section        0  oled_iic.o(i.WriteCmd)
+    i.WriteDat                               0x00002e0c   Section        0  oled_iic.o(i.WriteDat)
+    i.__ARM_clz                              0x00002e20   Section        0  depilogue.o(i.__ARM_clz)
+    i.__ARM_common_switch8                   0x00002e4e   Section        0  cw32f030_i2c.o(i.__ARM_common_switch8)
+    i.__NVIC_EnableIRQ                       0x00002e6c   Section        0  encoder.o(i.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x00002e6d   Thumb Code    18  encoder.o(i.__NVIC_EnableIRQ)
+    i.__NVIC_SetPriority                     0x00002e84   Section        0  uart.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x00002e85   Thumb Code   110  uart.o(i.__NVIC_SetPriority)
+    i.__NVIC_SetPriority                     0x00002efc   Section        0  gtim.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x00002efd   Thumb Code   110  gtim.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x00002f74   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00002f82   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00002f84   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.delay1ms                               0x00002f94   Section        0  system_cw32f030.o(i.delay1ms)
+    i.main                                   0x00002fec   Section        0  main.o(i.main)
+    .constdata                               0x00002ffc   Section     6080  oled_iic.o(.constdata)
+    .constdata                               0x000047bc   Section       12  global.o(.constdata)
+    .constdata                               0x000047c8   Section      100  cw32f030_rcc.o(.constdata)
     .data                                    0x20000000   Section       61  task.o(.data)
     Task_Comps                               0x20000000   Data          60  task.o(.data)
     .data                                    0x2000003d   Section        2  key.o(.data)
@@ -1486,48 +1487,48 @@ Image Symbol Table
     SYS_Init                                 0x00002715   Thumb Code    20  sys_init.o(i.SYS_Init)
     SampleVI                                 0x00002729   Thumb Code   278  adc.o(i.SampleVI)
     Set_Speed                                0x00002885   Thumb Code    72  motor.o(i.Set_Speed)
-    Speed_Count                              0x000028d9   Thumb Code    30  gtim.o(i.Speed_Count)
-    State_Machine                            0x00002901   Thumb Code     2  app.o(i.State_Machine)
-    SysTick_Handler                          0x00002905   Thumb Code    16  cw32f030_systick.o(i.SysTick_Handler)
-    SystemCoreClockUpdate                    0x0000291d   Thumb Code     8  system_cw32f030.o(i.SystemCoreClockUpdate)
-    SystemInit                               0x0000292d   Thumb Code    54  system_cw32f030.o(i.SystemInit)
-    Task_Marks_Handler_Callback              0x00002969   Thumb Code    92  task.o(i.Task_Marks_Handler_Callback)
-    Task_Pro_Handler_Callback                0x000029cd   Thumb Code    52  task.o(i.Task_Pro_Handler_Callback)
-    TasksHandle_10MS                         0x00002a09   Thumb Code     8  app.o(i.TasksHandle_10MS)
-    TasksHandle_200MS                        0x00002a11   Thumb Code     8  app.o(i.TasksHandle_200MS)
-    TasksHandle_20MS                         0x00002a19   Thumb Code    12  app.o(i.TasksHandle_20MS)
-    TasksHandle_250MS                        0x00002a25   Thumb Code    16  app.o(i.TasksHandle_250MS)
-    TasksHandle_500MS                        0x00002a39   Thumb Code   130  app.o(i.TasksHandle_500MS)
-    UART1_IRQHandleCallback                  0x00002ac9   Thumb Code    40  uart.o(i.UART1_IRQHandleCallback)
-    UART1_IRQHandler                         0x00002af5   Thumb Code     8  interrupts_cw32f030.o(i.UART1_IRQHandler)
-    UART2_IRQHandler                         0x00002afd   Thumb Code     2  interrupts_cw32f030.o(i.UART2_IRQHandler)
-    UART3_IRQHandler                         0x00002aff   Thumb Code     2  interrupts_cw32f030.o(i.UART3_IRQHandler)
-    UART_Configuration                       0x00002b01   Thumb Code   186  uart.o(i.UART_Configuration)
-    USART_ClearITPendingBit                  0x00002bd1   Thumb Code     8  cw32f030_uart.o(i.USART_ClearITPendingBit)
-    USART_GetITStatus                        0x00002bd9   Thumb Code    18  cw32f030_uart.o(i.USART_GetITStatus)
-    USART_ITConfig                           0x00002beb   Thumb Code    26  cw32f030_uart.o(i.USART_ITConfig)
-    USART_Init                               0x00002c05   Thumb Code   362  cw32f030_uart.o(i.USART_Init)
-    USART_ReceiveData_8bit                   0x00002d79   Thumb Code     8  cw32f030_uart.o(i.USART_ReceiveData_8bit)
-    USART_SendData_8bit                      0x00002d81   Thumb Code     4  cw32f030_uart.o(i.USART_SendData_8bit)
-    VC1_IRQHandler                           0x00002d85   Thumb Code     2  interrupts_cw32f030.o(i.VC1_IRQHandler)
-    VC2_IRQHandler                           0x00002d87   Thumb Code     2  interrupts_cw32f030.o(i.VC2_IRQHandler)
-    WDT_IRQHandler                           0x00002d89   Thumb Code     2  interrupts_cw32f030.o(i.WDT_IRQHandler)
-    WriteCmd                                 0x00002d8d   Thumb Code    16  oled_iic.o(i.WriteCmd)
-    WriteDat                                 0x00002da1   Thumb Code    16  oled_iic.o(i.WriteDat)
-    __ARM_clz                                0x00002db5   Thumb Code    46  depilogue.o(i.__ARM_clz)
-    __ARM_common_switch8                     0x00002de3   Thumb Code    28  cw32f030_i2c.o(i.__ARM_common_switch8)
-    __scatterload_copy                       0x00002f09   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00002f17   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00002f19   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    delay1ms                                 0x00002f29   Thumb Code    76  system_cw32f030.o(i.delay1ms)
-    main                                     0x00002f81   Thumb Code    16  main.o(i.main)
-    asc2_1206                                0x00002f90   Data        1140  oled_iic.o(.constdata)
-    asc2_1608                                0x00003404   Data        1520  oled_iic.o(.constdata)
-    asc2_2412                                0x000039f4   Data        3420  oled_iic.o(.constdata)
-    STEP_TAB                                 0x00004750   Data          12  global.o(.constdata)
-    hsiprs_tbl                               0x0000475c   Data          64  cw32f030_rcc.o(.constdata)
-    Region$$Table$$Base                      0x000047c0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000047e0   Number         0  anon$$obj.o(Region$$Table)
+    Speed_Count                              0x000028d9   Thumb Code    90  gtim.o(i.Speed_Count)
+    State_Machine                            0x00002949   Thumb Code    32  app.o(i.State_Machine)
+    SysTick_Handler                          0x00002971   Thumb Code    16  cw32f030_systick.o(i.SysTick_Handler)
+    SystemCoreClockUpdate                    0x00002989   Thumb Code     8  system_cw32f030.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x00002999   Thumb Code    54  system_cw32f030.o(i.SystemInit)
+    Task_Marks_Handler_Callback              0x000029d5   Thumb Code    92  task.o(i.Task_Marks_Handler_Callback)
+    Task_Pro_Handler_Callback                0x00002a39   Thumb Code    52  task.o(i.Task_Pro_Handler_Callback)
+    TasksHandle_10MS                         0x00002a75   Thumb Code     8  app.o(i.TasksHandle_10MS)
+    TasksHandle_200MS                        0x00002a7d   Thumb Code    12  app.o(i.TasksHandle_200MS)
+    TasksHandle_20MS                         0x00002a89   Thumb Code    12  app.o(i.TasksHandle_20MS)
+    TasksHandle_250MS                        0x00002a95   Thumb Code    16  app.o(i.TasksHandle_250MS)
+    TasksHandle_500MS                        0x00002aa9   Thumb Code   126  app.o(i.TasksHandle_500MS)
+    UART1_IRQHandleCallback                  0x00002b35   Thumb Code    40  uart.o(i.UART1_IRQHandleCallback)
+    UART1_IRQHandler                         0x00002b61   Thumb Code     8  interrupts_cw32f030.o(i.UART1_IRQHandler)
+    UART2_IRQHandler                         0x00002b69   Thumb Code     2  interrupts_cw32f030.o(i.UART2_IRQHandler)
+    UART3_IRQHandler                         0x00002b6b   Thumb Code     2  interrupts_cw32f030.o(i.UART3_IRQHandler)
+    UART_Configuration                       0x00002b6d   Thumb Code   186  uart.o(i.UART_Configuration)
+    USART_ClearITPendingBit                  0x00002c3d   Thumb Code     8  cw32f030_uart.o(i.USART_ClearITPendingBit)
+    USART_GetITStatus                        0x00002c45   Thumb Code    18  cw32f030_uart.o(i.USART_GetITStatus)
+    USART_ITConfig                           0x00002c57   Thumb Code    26  cw32f030_uart.o(i.USART_ITConfig)
+    USART_Init                               0x00002c71   Thumb Code   362  cw32f030_uart.o(i.USART_Init)
+    USART_ReceiveData_8bit                   0x00002de5   Thumb Code     8  cw32f030_uart.o(i.USART_ReceiveData_8bit)
+    USART_SendData_8bit                      0x00002ded   Thumb Code     4  cw32f030_uart.o(i.USART_SendData_8bit)
+    VC1_IRQHandler                           0x00002df1   Thumb Code     2  interrupts_cw32f030.o(i.VC1_IRQHandler)
+    VC2_IRQHandler                           0x00002df3   Thumb Code     2  interrupts_cw32f030.o(i.VC2_IRQHandler)
+    WDT_IRQHandler                           0x00002df5   Thumb Code     2  interrupts_cw32f030.o(i.WDT_IRQHandler)
+    WriteCmd                                 0x00002df9   Thumb Code    16  oled_iic.o(i.WriteCmd)
+    WriteDat                                 0x00002e0d   Thumb Code    16  oled_iic.o(i.WriteDat)
+    __ARM_clz                                0x00002e21   Thumb Code    46  depilogue.o(i.__ARM_clz)
+    __ARM_common_switch8                     0x00002e4f   Thumb Code    28  cw32f030_i2c.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x00002f75   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00002f83   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00002f85   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    delay1ms                                 0x00002f95   Thumb Code    76  system_cw32f030.o(i.delay1ms)
+    main                                     0x00002fed   Thumb Code    16  main.o(i.main)
+    asc2_1206                                0x00002ffc   Data        1140  oled_iic.o(.constdata)
+    asc2_1608                                0x00003470   Data        1520  oled_iic.o(.constdata)
+    asc2_2412                                0x00003a60   Data        3420  oled_iic.o(.constdata)
+    STEP_TAB                                 0x000047bc   Data          12  global.o(.constdata)
+    hsiprs_tbl                               0x000047c8   Data          64  cw32f030_rcc.o(.constdata)
+    Region$$Table$$Base                      0x0000482c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000484c   Number         0  anon$$obj.o(Region$$Table)
     Tasks_Max                                0x2000003c   Data           1  task.o(.data)
     key1_count                               0x2000003d   Data           1  key.o(.data)
     key2_count                               0x2000003e   Data           1  key.o(.data)
@@ -1537,11 +1538,13 @@ Image Symbol Table
     DIin                                     0x20000054   Data           4  global.o(.data)
     CanshuV                                  0x20000058   Data           4  global.o(.data)
     CanshuI                                  0x2000005c   Data           4  global.o(.data)
-    Err_Code                                 0x20000060   Data           2  global.o(.data)
-    Cur_step                                 0x20000062   Data           2  global.o(.data)
-    Motor_Start_F                            0x20000064   Data           2  global.o(.data)
-    OutPwm                                   0x20000066   Data           2  global.o(.data)
-    Dir                                      0x20000068   Data           1  global.o(.data)
+    MOTORSTATE                               0x20000060   Data           1  global.o(.data)
+    DZCount                                  0x20000061   Data           1  global.o(.data)
+    Err_Code                                 0x20000062   Data           2  global.o(.data)
+    Cur_step                                 0x20000064   Data           2  global.o(.data)
+    Motor_Start_F                            0x20000066   Data           2  global.o(.data)
+    OutPwm                                   0x20000068   Data           2  global.o(.data)
+    Dir                                      0x2000006a   Data           1  global.o(.data)
     ISH                                      0x2000006c   Data           4  global.o(.data)
     VSH                                      0x20000070   Data           4  global.o(.data)
     LSH                                      0x20000074   Data           4  global.o(.data)
@@ -1579,9 +1582,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000c1
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000048a0, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000490c, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000047e0, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000484c, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1755,69 +1758,68 @@ Memory Map of the image
     0x00002714   0x00002714   0x00000014   Code   RO          365    i.SYS_Init          sys_init.o
     0x00002728   0x00002728   0x0000015c   Code   RO          704    i.SampleVI          adc.o
     0x00002884   0x00002884   0x00000054   Code   RO          913    i.Set_Speed         motor.o
-    0x000028d8   0x000028d8   0x00000028   Code   RO          872    i.Speed_Count       gtim.o
-    0x00002900   0x00002900   0x00000002   Code   RO          400    i.State_Machine     app.o
-    0x00002902   0x00002902   0x00000002   PAD
-    0x00002904   0x00002904   0x00000018   Code   RO         3615    i.SysTick_Handler   cw32f030_systick.o
-    0x0000291c   0x0000291c   0x00000010   Code   RO         4166    i.SystemCoreClockUpdate  system_cw32f030.o
-    0x0000292c   0x0000292c   0x0000003c   Code   RO         4167    i.SystemInit        system_cw32f030.o
-    0x00002968   0x00002968   0x00000064   Code   RO          464    i.Task_Marks_Handler_Callback  task.o
-    0x000029cc   0x000029cc   0x0000003c   Code   RO          465    i.Task_Pro_Handler_Callback  task.o
-    0x00002a08   0x00002a08   0x00000008   Code   RO          401    i.TasksHandle_10MS  app.o
-    0x00002a10   0x00002a10   0x00000008   Code   RO          402    i.TasksHandle_200MS  app.o
-    0x00002a18   0x00002a18   0x0000000c   Code   RO          403    i.TasksHandle_20MS  app.o
-    0x00002a24   0x00002a24   0x00000014   Code   RO          404    i.TasksHandle_250MS  app.o
-    0x00002a38   0x00002a38   0x00000090   Code   RO          405    i.TasksHandle_500MS  app.o
-    0x00002ac8   0x00002ac8   0x0000002c   Code   RO          743    i.UART1_IRQHandleCallback  uart.o
-    0x00002af4   0x00002af4   0x00000008   Code   RO           28    i.UART1_IRQHandler  interrupts_cw32f030.o
-    0x00002afc   0x00002afc   0x00000002   Code   RO           29    i.UART2_IRQHandler  interrupts_cw32f030.o
-    0x00002afe   0x00002afe   0x00000002   Code   RO           30    i.UART3_IRQHandler  interrupts_cw32f030.o
-    0x00002b00   0x00002b00   0x000000d0   Code   RO          744    i.UART_Configuration  uart.o
-    0x00002bd0   0x00002bd0   0x00000008   Code   RO         3678    i.USART_ClearITPendingBit  cw32f030_uart.o
-    0x00002bd8   0x00002bd8   0x00000012   Code   RO         3684    i.USART_GetITStatus  cw32f030_uart.o
-    0x00002bea   0x00002bea   0x0000001a   Code   RO         3686    i.USART_ITConfig    cw32f030_uart.o
-    0x00002c04   0x00002c04   0x00000174   Code   RO         3687    i.USART_Init        cw32f030_uart.o
-    0x00002d78   0x00002d78   0x00000008   Code   RO         3690    i.USART_ReceiveData_8bit  cw32f030_uart.o
-    0x00002d80   0x00002d80   0x00000004   Code   RO         3692    i.USART_SendData_8bit  cw32f030_uart.o
-    0x00002d84   0x00002d84   0x00000002   Code   RO           31    i.VC1_IRQHandler    interrupts_cw32f030.o
-    0x00002d86   0x00002d86   0x00000002   Code   RO           32    i.VC2_IRQHandler    interrupts_cw32f030.o
-    0x00002d88   0x00002d88   0x00000002   Code   RO           33    i.WDT_IRQHandler    interrupts_cw32f030.o
-    0x00002d8a   0x00002d8a   0x00000002   PAD
-    0x00002d8c   0x00002d8c   0x00000014   Code   RO          570    i.WriteCmd          oled_iic.o
-    0x00002da0   0x00002da0   0x00000014   Code   RO          571    i.WriteDat          oled_iic.o
-    0x00002db4   0x00002db4   0x0000002e   Code   RO         4290    i.__ARM_clz         mf_p.l(depilogue.o)
-    0x00002de2   0x00002de2   0x0000001c   Code   RO         2694    i.__ARM_common_switch8  cw32f030_i2c.o
-    0x00002dfe   0x00002dfe   0x00000002   PAD
-    0x00002e00   0x00002e00   0x00000018   Code   RO          959    i.__NVIC_EnableIRQ  encoder.o
-    0x00002e18   0x00002e18   0x00000078   Code   RO          745    i.__NVIC_SetPriority  uart.o
-    0x00002e90   0x00002e90   0x00000078   Code   RO          873    i.__NVIC_SetPriority  gtim.o
-    0x00002f08   0x00002f08   0x0000000e   Code   RO         4296    i.__scatterload_copy  mc_p.l(handlers.o)
-    0x00002f16   0x00002f16   0x00000002   Code   RO         4297    i.__scatterload_null  mc_p.l(handlers.o)
-    0x00002f18   0x00002f18   0x0000000e   Code   RO         4298    i.__scatterload_zeroinit  mc_p.l(handlers.o)
-    0x00002f26   0x00002f26   0x00000002   PAD
-    0x00002f28   0x00002f28   0x00000058   Code   RO         4170    i.delay1ms          system_cw32f030.o
-    0x00002f80   0x00002f80   0x00000010   Code   RO          287    i.main              main.o
-    0x00002f90   0x00002f90   0x000017c0   Data   RO          573    .constdata          oled_iic.o
-    0x00004750   0x00004750   0x0000000c   Data   RO         1039    .constdata          global.o
-    0x0000475c   0x0000475c   0x00000064   Data   RO         3030    .constdata          cw32f030_rcc.o
-    0x000047c0   0x000047c0   0x00000020   Data   RO         4294    Region$$Table       anon$$obj.o
+    0x000028d8   0x000028d8   0x00000070   Code   RO          872    i.Speed_Count       gtim.o
+    0x00002948   0x00002948   0x00000028   Code   RO          400    i.State_Machine     app.o
+    0x00002970   0x00002970   0x00000018   Code   RO         3615    i.SysTick_Handler   cw32f030_systick.o
+    0x00002988   0x00002988   0x00000010   Code   RO         4166    i.SystemCoreClockUpdate  system_cw32f030.o
+    0x00002998   0x00002998   0x0000003c   Code   RO         4167    i.SystemInit        system_cw32f030.o
+    0x000029d4   0x000029d4   0x00000064   Code   RO          464    i.Task_Marks_Handler_Callback  task.o
+    0x00002a38   0x00002a38   0x0000003c   Code   RO          465    i.Task_Pro_Handler_Callback  task.o
+    0x00002a74   0x00002a74   0x00000008   Code   RO          401    i.TasksHandle_10MS  app.o
+    0x00002a7c   0x00002a7c   0x0000000c   Code   RO          402    i.TasksHandle_200MS  app.o
+    0x00002a88   0x00002a88   0x0000000c   Code   RO          403    i.TasksHandle_20MS  app.o
+    0x00002a94   0x00002a94   0x00000014   Code   RO          404    i.TasksHandle_250MS  app.o
+    0x00002aa8   0x00002aa8   0x0000008c   Code   RO          405    i.TasksHandle_500MS  app.o
+    0x00002b34   0x00002b34   0x0000002c   Code   RO          743    i.UART1_IRQHandleCallback  uart.o
+    0x00002b60   0x00002b60   0x00000008   Code   RO           28    i.UART1_IRQHandler  interrupts_cw32f030.o
+    0x00002b68   0x00002b68   0x00000002   Code   RO           29    i.UART2_IRQHandler  interrupts_cw32f030.o
+    0x00002b6a   0x00002b6a   0x00000002   Code   RO           30    i.UART3_IRQHandler  interrupts_cw32f030.o
+    0x00002b6c   0x00002b6c   0x000000d0   Code   RO          744    i.UART_Configuration  uart.o
+    0x00002c3c   0x00002c3c   0x00000008   Code   RO         3678    i.USART_ClearITPendingBit  cw32f030_uart.o
+    0x00002c44   0x00002c44   0x00000012   Code   RO         3684    i.USART_GetITStatus  cw32f030_uart.o
+    0x00002c56   0x00002c56   0x0000001a   Code   RO         3686    i.USART_ITConfig    cw32f030_uart.o
+    0x00002c70   0x00002c70   0x00000174   Code   RO         3687    i.USART_Init        cw32f030_uart.o
+    0x00002de4   0x00002de4   0x00000008   Code   RO         3690    i.USART_ReceiveData_8bit  cw32f030_uart.o
+    0x00002dec   0x00002dec   0x00000004   Code   RO         3692    i.USART_SendData_8bit  cw32f030_uart.o
+    0x00002df0   0x00002df0   0x00000002   Code   RO           31    i.VC1_IRQHandler    interrupts_cw32f030.o
+    0x00002df2   0x00002df2   0x00000002   Code   RO           32    i.VC2_IRQHandler    interrupts_cw32f030.o
+    0x00002df4   0x00002df4   0x00000002   Code   RO           33    i.WDT_IRQHandler    interrupts_cw32f030.o
+    0x00002df6   0x00002df6   0x00000002   PAD
+    0x00002df8   0x00002df8   0x00000014   Code   RO          570    i.WriteCmd          oled_iic.o
+    0x00002e0c   0x00002e0c   0x00000014   Code   RO          571    i.WriteDat          oled_iic.o
+    0x00002e20   0x00002e20   0x0000002e   Code   RO         4290    i.__ARM_clz         mf_p.l(depilogue.o)
+    0x00002e4e   0x00002e4e   0x0000001c   Code   RO         2694    i.__ARM_common_switch8  cw32f030_i2c.o
+    0x00002e6a   0x00002e6a   0x00000002   PAD
+    0x00002e6c   0x00002e6c   0x00000018   Code   RO          959    i.__NVIC_EnableIRQ  encoder.o
+    0x00002e84   0x00002e84   0x00000078   Code   RO          745    i.__NVIC_SetPriority  uart.o
+    0x00002efc   0x00002efc   0x00000078   Code   RO          873    i.__NVIC_SetPriority  gtim.o
+    0x00002f74   0x00002f74   0x0000000e   Code   RO         4296    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00002f82   0x00002f82   0x00000002   Code   RO         4297    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00002f84   0x00002f84   0x0000000e   Code   RO         4298    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00002f92   0x00002f92   0x00000002   PAD
+    0x00002f94   0x00002f94   0x00000058   Code   RO         4170    i.delay1ms          system_cw32f030.o
+    0x00002fec   0x00002fec   0x00000010   Code   RO          287    i.main              main.o
+    0x00002ffc   0x00002ffc   0x000017c0   Data   RO          573    .constdata          oled_iic.o
+    0x000047bc   0x000047bc   0x0000000c   Data   RO         1039    .constdata          global.o
+    0x000047c8   0x000047c8   0x00000064   Data   RO         3030    .constdata          cw32f030_rcc.o
+    0x0000482c   0x0000482c   0x00000020   Data   RO         4294    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000047e0, Size: 0x00000740, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0000484c, Size: 0x00000740, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x000047e0   0x0000003d   Data   RW          466    .data               task.o
-    0x2000003d   0x0000481d   0x00000002   Data   RW          521    .data               key.o
-    0x2000003f   0x0000481f   0x00000001   PAD
-    0x20000040   0x00004820   0x00000010   Data   RW          705    .data               adc.o
-    0x20000050   0x00004830   0x00000001   Data   RW          914    .data               motor.o
-    0x20000051   0x00004831   0x00000003   PAD
-    0x20000054   0x00004834   0x0000005a   Data   RW         1040    .data               global.o
-    0x200000ae   0x0000488e   0x00000002   PAD
-    0x200000b0   0x00004890   0x00000009   Data   RW         3617    .data               cw32f030_systick.o
-    0x200000b9   0x00004899   0x00000003   PAD
-    0x200000bc   0x0000489c   0x00000004   Data   RW         4171    .data               system_cw32f030.o
+    0x20000000   0x0000484c   0x0000003d   Data   RW          466    .data               task.o
+    0x2000003d   0x00004889   0x00000002   Data   RW          521    .data               key.o
+    0x2000003f   0x0000488b   0x00000001   PAD
+    0x20000040   0x0000488c   0x00000010   Data   RW          705    .data               adc.o
+    0x20000050   0x0000489c   0x00000001   Data   RW          914    .data               motor.o
+    0x20000051   0x0000489d   0x00000003   PAD
+    0x20000054   0x000048a0   0x0000005a   Data   RW         1040    .data               global.o
+    0x200000ae   0x000048fa   0x00000002   PAD
+    0x200000b0   0x000048fc   0x00000009   Data   RW         3617    .data               cw32f030_systick.o
+    0x200000b9   0x00004905   0x00000003   PAD
+    0x200000bc   0x00004908   0x00000004   Data   RW         4171    .data               system_cw32f030.o
     0x200000c0        -       0x00000480   Zero   RW          572    .bss                oled_iic.o
     0x20000540        -       0x00000200   Zero   RW          355    STACK               startup_cw32f030.o
 
@@ -1830,7 +1832,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        988        126          0         16          0       9943   adc.o
-       414         54          0          0          0       3135   app.o
+       452         62          0          0          0       3159   app.o
        412         30          0          0          0       1183   atim.o
        160         28          0          0          0       1097   btim.o
         60         12          0          0          0        482   buzzer.o
@@ -1847,8 +1849,8 @@ Image component sizes
         24          8          0          9          0       1633   cw32f030_systick.o
        436         10          0          0          0       3795   cw32f030_uart.o
        372         46          0          0          0       2523   encoder.o
-         0          0         12         90          0       1593   global.o
-       636         80          0          0          0       2243   gtim.o
+         0          0         12         90          0       1664   global.o
+       708         92          0          0          0       2287   gtim.o
        114          0          0          0          0     243274   interrupts_cw32f030.o
         84         12          0          0          0        537   iwdt.o
        156         26          0          2          0       1160   key.o
@@ -1863,9 +1865,9 @@ Image component sizes
        372         36          0          0          0       8999   uart.o
 
     ----------------------------------------------------------------------
-      9698        968       6416        192       1664     335547   Object Totals
+      9806        988       6416        192       1664     335686   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        26          0          0          9          0          0   (incl. Padding)
+        24          0          0          9          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1925,15 +1927,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11984       1010       6416        192       1664     329867   Grand Totals
-     11984       1010       6416        192       1664     329867   ELF Image Totals
-     11984       1010       6416        192          0          0   ROM Totals
+     12092       1030       6416        192       1664     330006   Grand Totals
+     12092       1030       6416        192       1664     330006   ELF Image Totals
+     12092       1030       6416        192          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                18400 (  17.97kB)
+    Total RO  Size (Code + RO Data)                18508 (  18.07kB)
     Total RW  Size (RW Data + ZI Data)              1856 (   1.81kB)
-    Total ROM Size (Code + RO Data + RW Data)      18592 (  18.16kB)
+    Total ROM Size (Code + RO Data + RW Data)      18700 (  18.26kB)
 
 ==============================================================================
 

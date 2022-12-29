@@ -16,5 +16,7 @@
 void KEY_Init(void);
 void KEY_Handle(void);
 
+extern uint8_t key1_count, key2_count;
+
 #endif
 

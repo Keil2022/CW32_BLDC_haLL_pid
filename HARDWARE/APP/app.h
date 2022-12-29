@@ -17,6 +17,8 @@
 #include "motor.h"
 #include "encoder.h"
 
+#include "control.h"
+
 void APP_config(void);
 
 void TasksHandle_10MS(void);

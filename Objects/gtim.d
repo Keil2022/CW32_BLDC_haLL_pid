@@ -40,3 +40,5 @@
 .\objects\gtim.o: .\HARDWARE\MOTOR\motor.h
 .\objects\gtim.o: .\HARDWARE\ENCODER\encoder.h
 .\objects\gtim.o: .\HARDWARE\MOTOR\motor.h
+.\objects\gtim.o: .\HARDWARE\CONTROL\control.h
+.\objects\gtim.o: .\HARDWARE\PID\pid.h

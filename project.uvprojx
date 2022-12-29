@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Libraries\inc;.\Libraries\src;.\User;.\HARDWARE\LED;.\User\SYS;.\HARDWARE\OLED;.\HARDWARE\GTIM;.\HARDWARE\APP;.\HARDWARE\TASK;.\HARDWARE\ADC;.\HARDWARE\UART;.\HARDWARE\IWDT;.\HARDWARE\BTIM;.\HARDWARE\ATIM;.\HARDWARE\MOTOR;.\HARDWARE\KEY;.\HARDWARE\ENCODER;.\HARDWARE\BUZZER;.\HARDWARE\GLOBAL</IncludePath>
+              <IncludePath>.\Libraries\inc;.\Libraries\src;.\User;.\HARDWARE\LED;.\User\SYS;.\HARDWARE\OLED;.\HARDWARE\GTIM;.\HARDWARE\APP;.\HARDWARE\TASK;.\HARDWARE\ADC;.\HARDWARE\UART;.\HARDWARE\IWDT;.\HARDWARE\BTIM;.\HARDWARE\ATIM;.\HARDWARE\MOTOR;.\HARDWARE\KEY;.\HARDWARE\ENCODER;.\HARDWARE\BUZZER;.\HARDWARE\GLOBAL;.\HARDWARE\CONTROL;.\HARDWARE\PID</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -480,6 +480,16 @@
               <FileName>global.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\HARDWARE\GLOBAL\global.c</FilePath>
+            </File>
+            <File>
+              <FileName>control.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HARDWARE\CONTROL\control.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\HARDWARE\PID\pid.c</FilePath>
             </File>
           </Files>
         </Group>

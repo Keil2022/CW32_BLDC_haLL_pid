@@ -22,22 +22,53 @@ Dialog DLL:      TARMCM1.DLL V1.14.0.0
  
 <h2>Project:</h2>
 C:\Users\Administrator\Desktop\32\CW32_BLDC_haLL_pid\project.uvprojx
-Project File Date:  08/08/2022
+Project File Date:  12/29/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\mdk5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling main.c...
-compiling app.c...
 compiling sys_init.c...
 compiling task.c...
-compiling btim.c...
+compiling adc.c...
 compiling gtim.c...
+compiling btim.c...
+compiling app.c...
+compiling pid.c...
+HARDWARE\PID\pid.c(31): error:  #20: identifier "PWM_PERIOD" is undefined
+  			else if(SSumError*SPEED_I>PWM_PERIOD)
+HARDWARE\PID\pid.c(49): error:  #20: identifier "PWM_PERIOD" is undefined
+    			if(j>PWM_PERIOD)OutPwmValue=PWM_PERIOD;
+HARDWARE\PID\pid.c: 0 warnings, 2 errors
 compiling motor.c...
+HARDWARE\MOTOR\motor.c(118): error:  #20: identifier "STEP_last" is undefined
+  	if(STEP_last==0||STEP_last==1){	 CW_ATIM->CH2CCRA=0;CW_ATIM->CH3CCRA=0; CW_ATIM->CH1CCRA=OutPwmValue;	}
+HARDWARE\MOTOR\motor.c(119): error:  #20: identifier "STEP_last" is undefined
+  	if(STEP_last==2||STEP_last==3){	 CW_ATIM->CH1CCRA=0;CW_ATIM->CH3CCRA=0;CW_ATIM->CH2CCRA=OutPwmValue;	}
+HARDWARE\MOTOR\motor.c(120): error:  #20: identifier "STEP_last" is undefined
+  	if(STEP_last==4||STEP_last==5){	 CW_ATIM->CH1CCRA=0;CW_ATIM->CH2CCRA=0;CW_ATIM->CH3CCRA=OutPwmValue;	}
+HARDWARE\MOTOR\motor.c: 0 warnings, 3 errors
+compiling main.c...
 compiling encoder.c...
-linking...
-Program Size: Code=11984 RO-data=6416 RW-data=192 ZI-data=1664  
-".\Objects\project.axf" - 0 Error(s), 0 Warning(s).
+compiling control.c...
+HARDWARE\CONTROL\control.c(45): error:  #20: identifier "TargS1" is undefined
+  	TargS1 = SetSpeed;
+HARDWARE\CONTROL\control.c(57): error:  #20: identifier "TargS1" is undefined
+  	TargS1 = SetSpeed;	
+HARDWARE\CONTROL\control.c(58): error:  #20: identifier "TimeCountPID" is undefined
+  	if(TimeCountPID >= 20)//计算实时速度并时行PID运算
+HARDWARE\CONTROL\control.c(61): error:  #20: identifier "RealS1" is undefined
+  		RealS1 = HALLcountTemp*500/MPolePairs;//HALLcount*100*60/6/POLEPAIRS;	
+HARDWARE\CONTROL\control.c(61): error:  #20: identifier "HALLcountTemp" is undefined
+  		RealS1 = HALLcountTemp*500/MPolePairs;//HALLcount*100*60/6/POLEPAIRS;	
+HARDWARE\CONTROL\control.c(70): warning:  #223-D: function "MOTOR_STOP0" declared implicitly
+  	MOTOR_STOP0();
+HARDWARE\CONTROL\control.c(80): warning:  #223-D: function "MOTOR_STOP0" declared implicitly
+  	MOTOR_STOP0();
+HARDWARE\CONTROL\control.c(92): error:  #20: identifier "TimeCountTemp" is undefined
+  	TimeCountTemp = 0;
+HARDWARE\CONTROL\control.c: 2 warnings, 6 errors
+compiling global.c...
+".\Objects\project.axf" - 11 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -55,7 +86,8 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:03
+Target not created.
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

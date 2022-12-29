@@ -4,7 +4,12 @@ unsigned int DIin = 0; 		//电机电流偏置
 unsigned int CanshuV = 0;	//母线电压100mV为单位
 unsigned int CanshuI = 0;	//母线电流mA
 
+unsigned char MOTORSTATE = STATESTARTCHECK;
+
 const unsigned char STEP_TAB[2][6]={{4,0,5,2,3,1},{1,3,2,5,0,4}};
+
+unsigned char DZCount = 0;	
+char temp_buff[100],temp_buff1[50];
 
 uint16_t Err_Code = 0;		//电机运转错误代码
 uint16_t Cur_step = 0; 		//当前HALL状态
@@ -39,4 +44,6 @@ int16_t  CNT_Value, CNT_uValue;
 uint16_t HALLcount = 0, HALLcount1 = 0;		//霍尔脉冲
 uint16_t RealS;								//速度
 
+unsigned int startflag=0,dirflag=0;
 
+unsigned int OutPwmValue = 0;//输出占空比值
